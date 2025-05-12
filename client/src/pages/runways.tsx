@@ -225,7 +225,7 @@ export default function Runways() {
                           </div>
                         </div>
                         <div className="mt-2 text-sm">
-                          <span className="text-neutral-500 dark:text-neutral-400">Observações:</span>
+                          <span className="text-neutral-500 dark:text-neutral-400">Notes:</span>
                           <span className="ml-2">{runway.remarks}</span>
                         </div>
                       </div>
@@ -233,19 +233,19 @@ export default function Runways() {
                     
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-2 mt-4">
                       <div className="p-3 bg-neutral-50 dark:bg-darkbg-card rounded-lg text-center">
-                        <div className="text-xs text-neutral-500 mb-1">Temperatura</div>
+                        <div className="text-xs text-neutral-500 mb-1">Temperature</div>
                         <div className="font-mono text-sm">09R: {temperatureData.runways[0].temperature}</div>
                         <div className="font-mono text-sm">27L: {temperatureData.runways[1].temperature}</div>
                       </div>
                       
                       <div className="p-3 bg-neutral-50 dark:bg-darkbg-card rounded-lg text-center">
-                        <div className="text-xs text-neutral-500 mb-1">Coef. Atrito</div>
+                        <div className="text-xs text-neutral-500 mb-1">Friction Coef.</div>
                         <div className="font-mono text-sm">09R: {frictionData.runways[0].friction}</div>
                         <div className="font-mono text-sm">27L: {frictionData.runways[1].friction}</div>
                       </div>
                       
                       <div className="p-3 bg-neutral-50 dark:bg-darkbg-card rounded-lg text-center">
-                        <div className="text-xs text-neutral-500 mb-1">Precipitação</div>
+                        <div className="text-xs text-neutral-500 mb-1">Precipitation</div>
                         <div className="font-mono text-sm">09R: 0.0 mm/h</div>
                         <div className="font-mono text-sm">27L: 0.0 mm/h</div>
                       </div>
@@ -259,7 +259,7 @@ export default function Runways() {
           <TabsContent value="temperature" className="space-y-4">
             <Card>
               <CardHeader className="pb-2">
-                <CardTitle className="text-lg">Temperatura do Asfalto (°C) - Últimas 24 horas</CardTitle>
+                <CardTitle className="text-lg">Asphalt Temperature (°C) - Last 24 hours</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="h-[400px]">
@@ -323,7 +323,7 @@ export default function Runways() {
           <TabsContent value="friction" className="space-y-4">
             <Card>
               <CardHeader className="pb-2">
-                <CardTitle className="text-lg">Coeficiente de Atrito - Últimas 24 horas</CardTitle>
+                <CardTitle className="text-lg">Friction Coefficient - Last 24 hours</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="h-[400px]">
