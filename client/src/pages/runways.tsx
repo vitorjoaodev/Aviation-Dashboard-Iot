@@ -394,7 +394,7 @@ export default function Runways() {
                       </div>
                     </div>
                     <div className="p-2">
-                      <div className="text-xs text-neutral-500 mb-1">Nível de Precaução</div>
+                      <div className="text-xs text-neutral-500 mb-1">Caution Level</div>
                       <div className="flex items-center">
                         <div className="w-full bg-neutral-200 dark:bg-neutral-700 rounded-full h-2.5">
                           <div className="bg-warning h-2.5 rounded-full" style={{ width: '100%' }}></div>
@@ -403,7 +403,7 @@ export default function Runways() {
                       </div>
                     </div>
                     <div className="p-2">
-                      <div className="text-xs text-neutral-500 mb-1">Nível de Alerta</div>
+                      <div className="text-xs text-neutral-500 mb-1">Alert Level</div>
                       <div className="flex items-center">
                         <div className="w-full bg-neutral-200 dark:bg-neutral-700 rounded-full h-2.5">
                           <div className="bg-critical h-2.5 rounded-full" style={{ width: '100%' }}></div>
@@ -421,7 +421,7 @@ export default function Runways() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <Card>
                 <CardHeader className="pb-2">
-                  <CardTitle className="text-lg">Histórico de Detecção de FOD</CardTitle>
+                  <CardTitle className="text-lg">FOD Detection History</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="h-[300px]">
@@ -460,7 +460,7 @@ export default function Runways() {
               
               <Card>
                 <CardHeader className="pb-2">
-                  <CardTitle className="text-lg">Registro de Detecções FOD</CardTitle>
+                  <CardTitle className="text-lg">FOD Detection Log</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="overflow-x-auto">
@@ -469,7 +469,7 @@ export default function Runways() {
                         <tr className="border-b border-neutral-200 dark:border-neutral-700">
                           <th className="text-left font-medium py-2 pl-2">ID</th>
                           <th className="text-left font-medium py-2">Timestamp</th>
-                          <th className="text-left font-medium py-2">Localização</th>
+                          <th className="text-left font-medium py-2">Location</th>
                           <th className="text-left font-medium py-2">Status</th>
                         </tr>
                       </thead>
