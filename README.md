@@ -1,73 +1,92 @@
-# GRU IOT - Aviation Safety Dashboard
+Aviation Dashboard IOT
 
-A responsive IoT dashboard for aviation safety operations at Guarulhos Airport that monitors runway conditions, weather, equipment status, and incidents in real-time.
+A modern, full-stack web application built with TypeScript, Express, Vite, and React, designed to deliver fast and scalable RESTful services with a clean and responsive UI.
 
-## Features
+🚀 Tech Stack
+Backend
+Express – Lightweight web framework for building APIs
 
-- Real-time monitoring of runway conditions
-- Weather monitoring system with alerts for adverse conditions
-- Equipment status tracking and maintenance scheduling
-- Incident management and historical analysis
-- Visual analytics and performance metrics
-- Flight radar integration
-- Critical alerts with sound notifications
-- Dark/Light theme support
-- Responsive design for desktop and mobile
+TypeScript – Type-safe JavaScript for improved development
 
-## Technology Stack
+Drizzle ORM – Modern SQL ORM for TypeScript
 
-- **Frontend**: React, TypeScript, TailwindCSS, shadcn/ui components
-- **Backend**: Node.js, Express
-- **Real-time updates**: WebSocket
-- **Visualization**: Recharts
-- **State Management**: React Context API
-- **Routing**: Wouter
-- **TypeSafety**: Zod, TypeScript
-- **Containerization**: Docker
-- **Package Management**: npm
+Neon (Serverless PostgreSQL) – Cloud-native database
 
-## Running the Application
+Express Session – Session management for authentication
 
-### Using Docker
+Passport.js – Authentication middleware (with local strategy)
 
-1. Make sure you have Docker and Docker Compose installed
+WebSockets (ws) – Real-time communication
 
-2. Build and run the application:
+connect-pg-simple – Store sessions in PostgreSQL
 
-```bash
-docker-compose up --build
-```
+memorystore – Fallback session store
 
-3. Access the application at http://localhost:5000
+Frontend
+React 18
 
-### Development Mode
+Vite – Lightning-fast dev server and bundler
 
-1. Clone the repository
+Tailwind CSS + tailwindcss-animate + tw-animate-css
 
-2. Install dependencies:
+ShadCN (Radix UI) – Accessible and themeable component library
 
-```bash
-npm install
-```
+Framer Motion – Smooth and expressive animations
 
-3. Run the development server:
+React Hook Form + Zod – Form handling with validation
 
-```bash
-npm run dev
-```
+TanStack Query (React Query) – Data fetching and caching
 
-4. Access the application at http://localhost:5000
+Recharts – Beautiful charts and data visualizations
 
-## Project Structure
+Embla Carousel – Lightweight carousel
 
-- `client/` - Frontend React application
-- `server/` - Backend Express server
-- `shared/` - Shared types and schemas
-- `public/` - Static assets
+Lucide Icons – Customizable and consistent icons
 
-## Credits
+Next Themes – Theme switching with Tailwind support
 
-Developed by João Vitor Belasque
+Wouter – Minimalist routing for React
 
-- [GitHub](https://github.com/joaobelasque) 
-- [LinkedIn](https://www.linkedin.com/in/joaobelasque)
+Dev Tools
+Vite + tsx – Fast local development
+
+Drizzle Kit – Migrations and schema generation
+
+ESBuild – Fast bundling for production
+
+TypeScript, PostCSS, Autoprefixer
+
+@replit plugins – Enhanced DX on Replit
+
+📂 Project Structure
+bash
+Copiar
+Editar
+/server      → Express server code (TS)
+/client      → React frontend (via Vite)
+/db          → Drizzle ORM schema and config
+📦 Scripts
+Command	Description
+npm run dev	Starts the app in development mode
+npm run build	Builds the app for production
+npm start	Runs the compiled app in production
+npm run check	Type-check with TypeScript
+npm run db:push	Pushes schema to the database
+
+🔒 Authentication
+Local username/password strategy using Passport.js
+
+Session stored in PostgreSQL or MemoryStore
+
+Protected routes and user management
+
+🌐 Deployment Ready
+Optimized build with vite + esbuild
+
+Server and client code bundled separately
+
+Modular and maintainable structure
+
+📝 License
+MIT
+
