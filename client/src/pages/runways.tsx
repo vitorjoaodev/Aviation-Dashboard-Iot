@@ -345,36 +345,36 @@ export default function Runways() {
                 
                 <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <h3 className="text-sm font-medium mb-2">Atrito Atual por Seção - 09R/27L</h3>
+                    <h3 className="text-sm font-medium mb-2">Current Friction by Section - 09R/27L</h3>
                     <div className="grid grid-cols-3 gap-2 text-center">
                       <div className="p-2 bg-neutral-50 dark:bg-darkbg-card rounded-lg">
-                        <div className="text-xs text-neutral-500">Cabeceira 09R</div>
+                        <div className="text-xs text-neutral-500">Threshold 09R</div>
                         <div className="font-mono">{(0.81 + Math.random() * 0.03).toFixed(2)}</div>
                       </div>
                       <div className="p-2 bg-neutral-50 dark:bg-darkbg-card rounded-lg">
-                        <div className="text-xs text-neutral-500">Meio</div>
+                        <div className="text-xs text-neutral-500">Middle</div>
                         <div className="font-mono">{(0.83 + Math.random() * 0.03).toFixed(2)}</div>
                       </div>
                       <div className="p-2 bg-neutral-50 dark:bg-darkbg-card rounded-lg">
-                        <div className="text-xs text-neutral-500">Cabeceira 27L</div>
+                        <div className="text-xs text-neutral-500">Threshold 27L</div>
                         <div className="font-mono">{(0.82 + Math.random() * 0.03).toFixed(2)}</div>
                       </div>
                     </div>
                   </div>
                   
                   <div>
-                    <h3 className="text-sm font-medium mb-2">Atrito Atual por Seção - 09L/27R</h3>
+                    <h3 className="text-sm font-medium mb-2">Current Friction by Section - 09L/27R</h3>
                     <div className="grid grid-cols-3 gap-2 text-center">
                       <div className="p-2 bg-neutral-50 dark:bg-darkbg-card rounded-lg">
-                        <div className="text-xs text-neutral-500">Cabeceira 09L</div>
+                        <div className="text-xs text-neutral-500">Threshold 09L</div>
                         <div className="font-mono">{(0.79 + Math.random() * 0.03).toFixed(2)}</div>
                       </div>
                       <div className="p-2 bg-neutral-50 dark:bg-darkbg-card rounded-lg">
-                        <div className="text-xs text-neutral-500">Meio</div>
+                        <div className="text-xs text-neutral-500">Middle</div>
                         <div className="font-mono">{(0.78 + Math.random() * 0.03).toFixed(2)}</div>
                       </div>
                       <div className="p-2 bg-neutral-50 dark:bg-darkbg-card rounded-lg">
-                        <div className="text-xs text-neutral-500">Cabeceira 27R</div>
+                        <div className="text-xs text-neutral-500">Threshold 27R</div>
                         <div className="font-mono">{(0.77 + Math.random() * 0.03).toFixed(2)}</div>
                       </div>
                     </div>
@@ -382,10 +382,10 @@ export default function Runways() {
                 </div>
                 
                 <div className="mt-4 p-4 rounded-lg bg-neutral-50 dark:bg-darkbg-card">
-                  <h3 className="text-sm font-medium mb-2">Padrões de Segurança</h3>
+                  <h3 className="text-sm font-medium mb-2">Safety Standards</h3>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className="p-2">
-                      <div className="text-xs text-neutral-500 mb-1">Nível Ideal</div>
+                      <div className="text-xs text-neutral-500 mb-1">Ideal Level</div>
                       <div className="flex items-center">
                         <div className="w-full bg-neutral-200 dark:bg-neutral-700 rounded-full h-2.5">
                           <div className="bg-success h-2.5 rounded-full" style={{ width: '100%' }}></div>
