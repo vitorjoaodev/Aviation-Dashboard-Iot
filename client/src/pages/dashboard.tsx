@@ -45,7 +45,7 @@ export default function Dashboard() {
       <Header 
         currentTime={formattedTime} 
         notificationCount={notificationCount}
-        userName="Operador"
+        userName="Operator"
         currentRoute="/"
       />
 
@@ -54,7 +54,7 @@ export default function Dashboard() {
           <Alert className="bg-critical text-white p-4 rounded-lg shadow-md flex items-start space-x-3 animate-pulse">
             <span className="material-icons">priority_high</span>
             <AlertDescription className="flex-1">
-              <h3 className="font-bold">ALERTA CRÍTICO</h3>
+              <h3 className="font-bold">CRITICAL ALERT</h3>
               <p>{criticalAlert.message}</p>
             </AlertDescription>
             <button 

@@ -26,12 +26,12 @@ interface HeaderProps {
 }
 
 const navItems: NavItem[] = [
-  { label: "Visão Geral", icon: "dashboard", route: "/" },
-  { label: "Pistas", icon: "flight_land", route: "/pistas" },
-  { label: "Meteorologia", icon: "cloud", route: "/meteorologia" },
-  { label: "Equipamentos", icon: "settings", route: "/equipamentos" },
-  { label: "Incidentes", icon: "warning", route: "/incidentes" },
-  { label: "Análises", icon: "insights", route: "/analises" }
+  { label: "Overview", icon: "dashboard", route: "/" },
+  { label: "Runways", icon: "flight_land", route: "/runways" },
+  { label: "Weather", icon: "cloud", route: "/weather" },
+  { label: "Equipment", icon: "settings", route: "/equipment" },
+  { label: "Incidents", icon: "warning", route: "/incidents" },
+  { label: "Analysis", icon: "insights", route: "/analysis" }
 ];
 
 export function Header({ currentTime, notificationCount, userName, currentRoute }: HeaderProps) {
@@ -48,7 +48,7 @@ export function Header({ currentTime, notificationCount, userName, currentRoute 
         <div className="flex items-center space-x-2">
           <span className="material-icons text-primary-dark dark:text-primary-light">flight_takeoff</span>
           <h1 className="text-lg md:text-xl font-bold">
-            GRU IOT <span className="text-neutral-500 dark:text-neutral-400 text-sm md:text-base font-normal">| SGSO Dashboard</span>
+            GRU IOT <span className="text-neutral-500 dark:text-neutral-400 text-sm md:text-base font-normal">| Safety Dashboard</span>
           </h1>
         </div>
         <div className="flex items-center space-x-4">
@@ -92,10 +92,10 @@ export function Header({ currentTime, notificationCount, userName, currentRoute 
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-              <DropdownMenuItem>Perfil</DropdownMenuItem>
-              <DropdownMenuItem>Configurações</DropdownMenuItem>
+              <DropdownMenuItem>Profile</DropdownMenuItem>
+              <DropdownMenuItem>Settings</DropdownMenuItem>
               <DropdownMenuSeparator />
-              <DropdownMenuItem>Sair</DropdownMenuItem>
+              <DropdownMenuItem>Sign Out</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>

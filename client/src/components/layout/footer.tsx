@@ -11,19 +11,19 @@ export function Footer({ version, lastUpdate }: FooterProps) {
     <footer className="bg-white dark:bg-darkbg-paper p-4 border-t border-neutral-100 dark:border-neutral-800 text-center text-xs text-neutral-500">
       <div className="flex flex-col md:flex-row justify-between items-center">
         <div>
-          GRU IOT - Sistema de Monitoramento SGSO © {new Date().getFullYear()}
+          GRU IOT - Aviation Safety Monitoring System © {new Date().getFullYear()}
         </div>
         <div className="mt-2 md:mt-0 flex space-x-4">
-          <Link href="/suporte" className="hover:text-primary">Suporte</Link>
-          <Link href="/documentacao" className="hover:text-primary">Documentação</Link>
-          <Link href="/privacidade" className="hover:text-primary">Política de Privacidade</Link>
+          <Link href="/support" className="hover:text-primary">Support</Link>
+          <Link href="/documentation" className="hover:text-primary">Documentation</Link>
+          <Link href="/privacy" className="hover:text-primary">Privacy Policy</Link>
         </div>
         <div className="mt-2 md:mt-0">
-          Versão {version} | Última atualização: {lastUpdate}
+          Version {version} | Last update: {lastUpdate}
         </div>
       </div>
       <div className="mt-3 pt-2 border-t border-neutral-100 dark:border-neutral-800 developer-credit">
-        Desenvolvido por João Vitor Belasque • 
+        Developed by João Vitor Belasque • 
         <a 
           href="https://github.com/joaobelasque" 
           target="_blank" 

@@ -16,11 +16,11 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Dashboard} />
-      <Route path="/pistas" component={Runways} />
-      <Route path="/meteorologia" component={Weather} />
-      <Route path="/equipamentos" component={Equipment} />
-      <Route path="/incidentes" component={Incidents} />
-      <Route path="/analises" component={Analysis} />
+      <Route path="/runways" component={Runways} />
+      <Route path="/weather" component={Weather} />
+      <Route path="/equipment" component={Equipment} />
+      <Route path="/incidents" component={Incidents} />
+      <Route path="/analysis" component={Analysis} />
       <Route path="/flightradar" component={FlightRadar} />
       <Route component={NotFound} />
     </Switch>
