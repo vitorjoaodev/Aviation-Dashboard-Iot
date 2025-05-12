@@ -211,17 +211,17 @@ export default function Incidents() {
           <Card className="md:col-span-2">
             <CardHeader className="pb-2">
               <div className="flex justify-between items-center">
-                <CardTitle className="text-lg">Incidentes Ativos</CardTitle>
+                <CardTitle className="text-lg">Active Incidents</CardTitle>
                 <div className="flex items-center space-x-2">
                   <select 
                     value={filter}
                     onChange={(e) => setFilter(e.target.value)}
                     className="bg-neutral-100 dark:bg-neutral-800 rounded-md border-none py-1 pl-2 pr-4 text-sm"
                   >
-                    <option value="all">Todos</option>
-                    <option value="critical">Críticos</option>
-                    <option value="warning">Atenção</option>
-                    <option value="info">Informativos</option>
+                    <option value="all">All</option>
+                    <option value="critical">Critical</option>
+                    <option value="warning">Warning</option>
+                    <option value="info">Informational</option>
                   </select>
                   <Button size="icon" variant="outline" className="p-1 bg-neutral-100 dark:bg-neutral-800">
                     <span className="material-icons text-sm">filter_list</span>
@@ -246,12 +246,12 @@ export default function Incidents() {
                 ) : (
                   <div className="text-center py-8">
                     <span className="material-icons text-3xl text-neutral-400 mb-2">check_circle</span>
-                    <p>Nenhum incidente ativo com os filtros atuais.</p>
+                    <p>No active incidents with current filters.</p>
                   </div>
                 )}
                 
                 <div className="flex justify-center">
-                  <Button variant="link" className="text-primary">Carregar mais</Button>
+                  <Button variant="link" className="text-primary">Load more</Button>
                 </div>
               </div>
             </CardContent>
@@ -260,17 +260,17 @@ export default function Incidents() {
         
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">
           <TabsList className="bg-neutral-100 dark:bg-neutral-800">
-            <TabsTrigger value="active">Todos os Incidentes</TabsTrigger>
-            <TabsTrigger value="history">Histórico</TabsTrigger>
-            <TabsTrigger value="protocols">Protocolos de Resposta</TabsTrigger>
-            <TabsTrigger value="analysis">Análise</TabsTrigger>
+            <TabsTrigger value="active">All Incidents</TabsTrigger>
+            <TabsTrigger value="history">History</TabsTrigger>
+            <TabsTrigger value="protocols">Response Protocols</TabsTrigger>
+            <TabsTrigger value="analysis">Analysis</TabsTrigger>
           </TabsList>
           
           <TabsContent value="active" className="space-y-4">
             <Card>
               <CardHeader className="pb-2">
                 <div className="flex justify-between items-center">
-                  <CardTitle className="text-lg">Lista de Incidentes</CardTitle>
+                  <CardTitle className="text-lg">Incident List</CardTitle>
                   <div className="flex items-center space-x-2">
                     <div className="relative">
                       <span className="absolute inset-y-0 left-0 flex items-center pl-2">
@@ -278,7 +278,7 @@ export default function Incidents() {
                       </span>
                       <input
                         className="bg-neutral-100 dark:bg-neutral-800 py-1 pl-8 pr-4 rounded-md w-64 text-sm placeholder:text-neutral-400"
-                        placeholder="Buscar incidente..."
+                        placeholder="Search incidents..."
                         type="text"
                       />
                     </div>
@@ -288,7 +288,7 @@ export default function Incidents() {
                       className="bg-neutral-100 dark:bg-neutral-800"
                     >
                       <span className="material-icons text-sm mr-1">file_download</span>
-                      Exportar
+                      Export
                     </Button>
                   </div>
                 </div>
@@ -300,10 +300,10 @@ export default function Incidents() {
                       <tr className="border-b border-neutral-200 dark:border-neutral-700">
                         <th className="text-left font-medium py-2 px-2">ID</th>
                         <th className="text-left font-medium py-2 px-2">Timestamp</th>
-                        <th className="text-left font-medium py-2 px-2">Título</th>
-                        <th className="text-left font-medium py-2 px-2">Severidade</th>
+                        <th className="text-left font-medium py-2 px-2">Title</th>
+                        <th className="text-left font-medium py-2 px-2">Severity</th>
                         <th className="text-left font-medium py-2 px-2">Status</th>
-                        <th className="text-left font-medium py-2 px-2">Ações</th>
+                        <th className="text-left font-medium py-2 px-2">Actions</th>
                       </tr>
                     </thead>
                     <tbody>
