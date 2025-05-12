@@ -1,92 +1,101 @@
-Aviation Dashboard IOT
+# ✈️ Aviation Dashboard IoT
 
-A modern, full-stack web application built with TypeScript, Express, Vite, and React, designed to deliver fast and scalable RESTful services with a clean and responsive UI.
+A full-stack web application designed to **monitor and mitigate operational risks** at **Guarulhos International Airport (GRU), Brazil**, through real-time data visualization and control powered by IoT integrations.
 
-🚀 Tech Stack
-Backend
-Express – Lightweight web framework for building APIs
+This project aims to provide actionable insights to aviation professionals by connecting backend services, sensor data, and a dynamic interface in one modern dashboard solution.
 
-TypeScript – Type-safe JavaScript for improved development
+---
 
-Drizzle ORM – Modern SQL ORM for TypeScript
+## 🚀 Tech Stack
 
-Neon (Serverless PostgreSQL) – Cloud-native database
+### Backend
+- **Express** – Fast, unopinionated web server
+- **TypeScript** – Strongly typed JavaScript
+- **Drizzle ORM** – Type-safe SQL layer
+- **Neon (PostgreSQL)** – Serverless relational database
+- **Express Session** – Robust session handling
+- **Passport.js** – Authentication (Local Strategy)
+- **WebSockets (`ws`)** – Real-time updates
+- **connect-pg-simple** / **memorystore** – Session stores
 
-Express Session – Session management for authentication
+### Frontend
+- **React 18**
+- **Vite** – Lightning-fast bundler and dev server
+- **Tailwind CSS** with **tailwindcss-animate** and **tw-animate-css**
+- **Radix UI + ShadCN** – Beautiful, accessible UI components
+- **Framer Motion** – Seamless animations
+- **React Hook Form + Zod** – Form validation and error handling
+- **TanStack Query (React Query)** – Powerful data synchronization
+- **Recharts** – Advanced charting and data visualization
+- **Lucide Icons**, **Embla Carousel**, **Wouter**, **Next Themes**
 
-Passport.js – Authentication middleware (with local strategy)
+### Developer Tools
+- **tsx + vite** – Fast builds and reloads
+- **Drizzle Kit** – Schema & migrations
+- **esbuild** – Production-grade bundling
+- **TypeScript**, **PostCSS**, **Autoprefixer**
+- **@replit plugins** – Optional: runtime error modal, cartographer
 
-WebSockets (ws) – Real-time communication
+---
 
-connect-pg-simple – Store sessions in PostgreSQL
+## 📂 Project Structure
 
-memorystore – Fallback session store
+/server → Express backend (IoT and REST endpoints)
+/client → Vite-powered React frontend
+/db → Drizzle ORM config and schema
 
-Frontend
-React 18
-
-Vite – Lightning-fast dev server and bundler
-
-Tailwind CSS + tailwindcss-animate + tw-animate-css
-
-ShadCN (Radix UI) – Accessible and themeable component library
-
-Framer Motion – Smooth and expressive animations
-
-React Hook Form + Zod – Form handling with validation
-
-TanStack Query (React Query) – Data fetching and caching
-
-Recharts – Beautiful charts and data visualizations
-
-Embla Carousel – Lightweight carousel
-
-Lucide Icons – Customizable and consistent icons
-
-Next Themes – Theme switching with Tailwind support
-
-Wouter – Minimalist routing for React
-
-Dev Tools
-Vite + tsx – Fast local development
-
-Drizzle Kit – Migrations and schema generation
-
-ESBuild – Fast bundling for production
-
-TypeScript, PostCSS, Autoprefixer
-
-@replit plugins – Enhanced DX on Replit
-
-📂 Project Structure
-bash
+yaml
 Copiar
 Editar
-/server      → Express server code (TS)
-/client      → React frontend (via Vite)
-/db          → Drizzle ORM schema and config
-📦 Scripts
-Command	Description
-npm run dev	Starts the app in development mode
-npm run build	Builds the app for production
-npm start	Runs the compiled app in production
-npm run check	Type-check with TypeScript
-npm run db:push	Pushes schema to the database
 
-🔒 Authentication
-Local username/password strategy using Passport.js
+---
 
-Session stored in PostgreSQL or MemoryStore
+## 📦 Scripts
 
-Protected routes and user management
+| Script            | Description                                |
+|-------------------|--------------------------------------------|
+| `npm run dev`     | Launch app in development mode             |
+| `npm run build`   | Build frontend and bundle backend          |
+| `npm start`       | Run the production-ready app               |
+| `npm run check`   | Type check with TypeScript                 |
+| `npm run db:push` | Push database schema with Drizzle Kit      |
 
-🌐 Deployment Ready
-Optimized build with vite + esbuild
+---
 
-Server and client code bundled separately
+## 🔐 Authentication & Sessions
 
-Modular and maintainable structure
+- Secure user authentication with **Passport.js**
+- Sessions stored via **PostgreSQL** or **in-memory**
+- Designed to support scalable multi-user environments
 
-📝 License
+---
+
+## 🌐 Purpose & Context
+
+This platform was developed as part of a security and monitoring initiative to **enhance aviation safety operations** through the **integration of real-time IoT systems**, aiming to mitigate runway incursions, unauthorized access, equipment failure, and other risk factors at **Guarulhos International Airport (SBGR)**.
+
+---
+
+## 🛠️ Features
+
+- IoT data visualization for runway and terminal monitoring  
+- Real-time WebSocket updates  
+- Role-based user access and authentication  
+- Custom charts and analytics  
+- Responsive, accessible UI  
+- Modular and production-ready codebase  
+
+---
+
+## 👨‍💻 Developed by
+
+**João Vitor Belasque**
+
+- 🌐 [LinkedIn](https://www.linkedin.com/in/joaovitorfullstack/)  
+- 💻 [GitHub](https://github.com/vitorjoaodev)
+
+---
+
+## 📝 License
+
 MIT
-
