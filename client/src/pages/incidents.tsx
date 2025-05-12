@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { format } from "date-fns";
-import { ptBR } from "date-fns/locale";
+import { enUS } from "date-fns/locale";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { useDashboard } from "@/contexts/dashboard-context";
@@ -56,7 +56,7 @@ export default function Incidents() {
     document.title = "GRU IOT - Incident Management";
   }, []);
 
-  const formattedTime = format(currentTime, "dd/MM/yyyy - HH:mm:ss", { locale: ptBR });
+  const formattedTime = format(currentTime, "MM/dd/yyyy - HH:mm:ss", { locale: enUS });
   
   // Filter incidents
   const filteredIncidents = React.useMemo(() => {
@@ -111,20 +111,20 @@ export default function Incidents() {
         currentTime={formattedTime} 
         notificationCount={notificationCount}
         userName="Operador"
-        currentRoute="/incidentes"
+        currentRoute="/incidents"
       />
       
       <main className="flex-1 p-4 md:p-6 overflow-auto space-y-6">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
           <div>
-            <h1 className="text-2xl font-bold mb-1">Gerenciamento de Incidentes</h1>
-            <p className="text-neutral-500 dark:text-neutral-400">Monitoramento e gestão de incidentes operacionais do aeroporto</p>
+            <h1 className="text-2xl font-bold mb-1">Incident Management</h1>
+            <p className="text-neutral-500 dark:text-neutral-400">Monitoring and management of airport operational incidents</p>
           </div>
           
           <div className="mt-4 md:mt-0 flex space-x-2">
             <Button>
               <span className="material-icons text-sm mr-1">add</span>
-              Novo Incidente
+              New Incident
             </Button>
           </div>
         </div>
@@ -132,7 +132,7 @@ export default function Incidents() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <Card>
             <CardHeader className="pb-2">
-              <CardTitle className="text-lg">Status de Incidentes</CardTitle>
+              <CardTitle className="text-lg">Incident Status</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="h-48 flex justify-center">
@@ -140,9 +140,9 @@ export default function Incidents() {
                   <PieChart>
                     <Pie
                       data={[
-                        { name: "Críticos", value: statusCounts.critical, color: "#F44336" },
-                        { name: "Atenção", value: statusCounts.warning, color: "#FFC107" },
-                        { name: "Informativos", value: statusCounts.info, color: "#607D8B" }
+                        { name: "Critical", value: statusCounts.critical, color: "#F44336" },
+                        { name: "Warning", value: statusCounts.warning, color: "#FFC107" },
+                        { name: "Informational", value: statusCounts.info, color: "#607D8B" }
                       ]}
                       cx="50%"
                       cy="50%"
@@ -154,9 +154,9 @@ export default function Incidents() {
                       labelLine={false}
                     >
                       {[
-                        { name: "Críticos", value: statusCounts.critical, color: "#F44336" },
-                        { name: "Atenção", value: statusCounts.warning, color: "#FFC107" },
-                        { name: "Informativos", value: statusCounts.info, color: "#607D8B" }
+                        { name: "Critical", value: statusCounts.critical, color: "#F44336" },
+                        { name: "Warning", value: statusCounts.warning, color: "#FFC107" },
+                        { name: "Informational", value: statusCounts.info, color: "#607D8B" }
                       ].map((entry, index) => (
                         <Cell 
                           key={`cell-${index}`} 
@@ -171,22 +171,22 @@ export default function Incidents() {
               
               <div className="grid grid-cols-3 gap-2 text-center">
                 <div className="p-2 bg-neutral-50 dark:bg-darkbg-card rounded-lg">
-                  <div className="text-xs text-neutral-500 mb-1">Críticos</div>
+                  <div className="text-xs text-neutral-500 mb-1">Critical</div>
                   <div className="font-medium text-critical">{statusCounts.critical}</div>
                 </div>
                 <div className="p-2 bg-neutral-50 dark:bg-darkbg-card rounded-lg">
-                  <div className="text-xs text-neutral-500 mb-1">Atenção</div>
+                  <div className="text-xs text-neutral-500 mb-1">Warning</div>
                   <div className="font-medium text-warning">{statusCounts.warning}</div>
                 </div>
                 <div className="p-2 bg-neutral-50 dark:bg-darkbg-card rounded-lg">
-                  <div className="text-xs text-neutral-500 mb-1">Informativos</div>
+                  <div className="text-xs text-neutral-500 mb-1">Informational</div>
                   <div className="font-medium text-neutral-500">{statusCounts.info}</div>
                 </div>
               </div>
               
               <div className="mt-4 p-3 bg-neutral-50 dark:bg-darkbg-card rounded-lg">
                 <div className="flex justify-between items-center">
-                  <h3 className="font-medium mb-1">Tempo médio de resposta</h3>
+                  <h3 className="font-medium mb-1">Average response time</h3>
                   <span className="text-sm">{analysisData.responseTimeStats.average} min</span>
                 </div>
                 <div className="w-full bg-neutral-200 dark:bg-neutral-700 rounded-full h-2.5">
@@ -201,8 +201,8 @@ export default function Incidents() {
                   ></div>
                 </div>
                 <div className="mt-1 flex justify-between text-xs text-neutral-500">
-                  <span>Meta: {analysisData.responseTimeStats.target} min</span>
-                  <span>Melhor: {analysisData.responseTimeStats.best} min</span>
+                  <span>Target: {analysisData.responseTimeStats.target} min</span>
+                  <span>Best: {analysisData.responseTimeStats.best} min</span>
                 </div>
               </div>
             </CardContent>
