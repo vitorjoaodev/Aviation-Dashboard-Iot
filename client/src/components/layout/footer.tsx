@@ -22,6 +22,26 @@ export function Footer({ version, lastUpdate }: FooterProps) {
           Versão {version} | Última atualização: {lastUpdate}
         </div>
       </div>
+      <div className="mt-3 pt-2 border-t border-neutral-100 dark:border-neutral-800 developer-credit">
+        Desenvolvido por João Vitor Belasque • 
+        <a 
+          href="https://github.com/joaobelasque" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="text-primary hover:underline mx-1"
+        >
+          GitHub
+        </a>
+        • 
+        <a 
+          href="https://www.linkedin.com/in/joaobelasque" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="text-primary hover:underline mx-1"
+        >
+          LinkedIn
+        </a>
+      </div>
     </footer>
   );
 }

@@ -39,30 +39,30 @@
   --background: 240 10% 3.9%;
   --foreground: 0 0% 98%;
   --muted: 240 3.7% 15.9%;
-  --muted-foreground: 240 5% 64.9%;
+  --muted-foreground: 240 5% 84.9%; /* Improved contrast */
   --popover: 240 10% 3.9%;
   --popover-foreground: 0 0% 98%;
-  --card: 240 10% 15%;
+  --card: 240 10% 8%; /* Darker card background for better contrast */
   --card-foreground: 0 0% 98%;
-  --border: 240 3.7% 15.9%;
-  --input: 240 3.7% 15.9%;
-  --primary: 207 90% 54%;
-  --primary-light: 207 90% 64%;
-  --primary-dark: 207 90% 44%;
+  --border: 240 3.7% 25%; /* More visible borders */
+  --input: 240 3.7% 20%; /* More visible inputs */
+  --primary: 207 90% 60%; /* Brighter primary */
+  --primary-light: 207 90% 70%;
+  --primary-dark: 207 90% 50%;
   --primary-foreground: 211 100% 99%;
   --secondary: 240 3.7% 15.9%;
   --secondary-foreground: 0 0% 98%;
   --accent: 240 3.7% 15.9%;
   --accent-foreground: 0 0% 98%;
-  --destructive: 0 62.8% 30.6%;
+  --destructive: 0 62.8% 40.6%; /* Brighter for visibility */
   --destructive-foreground: 0 0% 98%;
-  --success: 142 70% 49%;
+  --success: 142 70% 55%; /* Brighter success */
   --success-foreground: 0 0% 98%;
-  --warning: 38 92% 50%;
-  --warning-dark: 38 92% 60%;
-  --warning-foreground: 0 0% 98%;
-  --critical: 0 84% 60%;
-  --critical-dark: 0 84% 70%;
+  --warning: 38 92% 60%; /* Brighter warning */
+  --warning-dark: 38 92% 70%;
+  --warning-foreground: 0 0% 10%; /* Dark text on bright warning */
+  --critical: 0 84% 65%; /* Brighter critical */
+  --critical-dark: 0 84% 75%;
   --critical-foreground: 0 0% 98%;
   --ring: 240 4.9% 83.9%;
   --radius: 0.5rem;
@@ -78,7 +78,7 @@
   }
 }
 
-/* Custom styles */
+/* Custom styles for dark theme with improved contrast */
 .darkbg-paper {
   @apply bg-[#121212] dark:bg-[#121212];
 }
@@ -93,6 +93,19 @@
 
 .dark .dark\:bg-darkbg-card {
   background-color: #1E1E1E;
+}
+
+/* Custom dark theme card backgrounds with better contrast */
+.dark .bg-neutral-50 {
+  background-color: #1a1a1a;
+}
+
+.dark .bg-neutral-100 {
+  background-color: #222222;
+}
+
+.dark .bg-neutral-200 {
+  background-color: #333333;
 }
 
 /* Utility classes for status colors */
