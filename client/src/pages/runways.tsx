@@ -84,7 +84,7 @@ export default function Runways() {
   
   // Mock FOD detection logs
   const fodDetectionLogs = [
-    { id: "FOD-2775", timestamp: "14:32 - 18/05/2023", location: "09R/27L próximo à Taxiway B", size: "15cm", material: "Metálico", status: "Removido" },
+    { id: "FOD-2775", timestamp: "14:32 - 18/05/2023", location: "09R/27L near Taxiway B", size: "15cm", material: "Metal", status: "Removed" },
     { id: "FOD-2774", timestamp: "09:17 - 18/05/2023", location: "27L próximo à cabeceira", size: "5cm", material: "Plástico", status: "Removido" },
     { id: "FOD-2773", timestamp: "21:45 - 17/05/2023", location: "09L/27R meio da pista", size: "8cm", material: "Borracha", status: "Removido" },
     { id: "FOD-2772", timestamp: "15:22 - 16/05/2023", location: "09R 200m da cabeceira", size: "3cm", material: "Metálico", status: "Removido" },
@@ -571,7 +571,7 @@ export default function Runways() {
                     </div>
                     <div>
                       <div className="flex justify-between mb-1 text-sm">
-                        <span>Fragmentos de pneu</span>
+                        <span>Tire fragments</span>
                         <span>90%</span>
                       </div>
                       <div className="w-full bg-neutral-200 dark:bg-neutral-700 rounded-full h-2.5">
@@ -580,7 +580,7 @@ export default function Runways() {
                     </div>
                     <div>
                       <div className="flex justify-between mb-1 text-sm">
-                        <span>Detecção em condições adversas</span>
+                        <span>Detection in adverse conditions</span>
                         <span>85%</span>
                       </div>
                       <div className="w-full bg-neutral-200 dark:bg-neutral-700 rounded-full h-2.5">
