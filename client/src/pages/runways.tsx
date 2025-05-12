@@ -497,7 +497,7 @@ export default function Runways() {
                   </div>
                   <div className="mt-4">
                     <Button variant="link" className="text-primary text-sm">
-                      Ver todos os registros
+                      View all records
                       <span className="material-icons text-sm ml-1">arrow_forward</span>
                     </Button>
                   </div>
@@ -507,23 +507,23 @@ export default function Runways() {
             
             <Card>
               <CardHeader className="pb-2">
-                <CardTitle className="text-lg">Sistema de Detecção FOD</CardTitle>
+                <CardTitle className="text-lg">FOD Detection System</CardTitle>
               </CardHeader>
               <CardContent className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-4">
                   <div className="p-4 bg-neutral-50 dark:bg-darkbg-card rounded-lg">
-                    <h3 className="font-medium mb-2">Status do Sistema</h3>
+                    <h3 className="font-medium mb-2">System Status</h3>
                     <div className="grid grid-cols-2 gap-2 text-sm">
                       <div>
-                        <span className="text-neutral-500 dark:text-neutral-400">Cobertura 09R/27L:</span>
+                        <span className="text-neutral-500 dark:text-neutral-400">Coverage 09R/27L:</span>
                         <span className="ml-2 text-success">100%</span>
                       </div>
                       <div>
-                        <span className="text-neutral-500 dark:text-neutral-400">Cobertura 09L/27R:</span>
+                        <span className="text-neutral-500 dark:text-neutral-400">Coverage 09L/27R:</span>
                         <span className="ml-2 text-success">100%</span>
                       </div>
                       <div>
-                        <span className="text-neutral-500 dark:text-neutral-400">Sensores ativos:</span>
+                        <span className="text-neutral-500 dark:text-neutral-400">Active sensors:</span>
                         <span className="ml-2">32/32</span>
                       </div>
                       <div>
