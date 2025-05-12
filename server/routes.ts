@@ -107,7 +107,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
             visibility: Math.round((5.2 + Math.random() * 1 - 0.5) * 10) / 10,
             visibilityStatus: Math.random() > 0.7 ? "normal" : "reduced",
             qnh: Math.round(1013 + Math.random() * 2 - 1),
-            qnhTrend: Math.random() > 0.6 ? "Estável" : Math.random() > 0.5 ? "Subindo" : "Descendo",
+            qnhTrend: Math.random() > 0.6 ? "Stable" : Math.random() > 0.5 ? "Rising" : "Falling",
             windDirection: Math.round(270 + Math.random() * 20 - 10),
             windSpeed: Math.round((12 + Math.random() * 4 - 2) * 10) / 10,
             windGust: Math.round((18 + Math.random() * 4 - 2) * 10) / 10,
@@ -120,14 +120,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
             {
               type: "warning",
               icon: "flash_on",
-              title: "Alerta de Tempestade",
-              description: `Atividade elétrica detectada a ${Math.round(15 + Math.random() * 5 - 2)}km ao sul. Previsão de chegada em ${Math.round(25 + Math.random() * 10 - 5)}-${Math.round(30 + Math.random() * 10 - 5)} min.`
+              title: "Storm Alert",
+              description: `Electrical activity detected ${Math.round(15 + Math.random() * 5 - 2)}km south. Expected arrival in ${Math.round(25 + Math.random() * 10 - 5)}-${Math.round(30 + Math.random() * 10 - 5)} min.`
             },
             {
               type: "info",
               icon: "water_drop",
-              title: "Precipitação",
-              description: `Chuva fraca prevista para as próximas ${Math.round(2 + Math.random())} horas. Acumulado esperado: 2-5mm.`
+              title: "Precipitation",
+              description: `Light rain expected for the next ${Math.round(2 + Math.random())} hours. Expected accumulation: 2-5mm.`
             }
           ]
         });
@@ -139,45 +139,45 @@ export async function registerRoutes(app: Express): Promise<Server> {
           equipment: [
             {
               id: "equip-1",
-              name: "Sistema de Iluminação",
+              name: "Lighting System",
               status: "critical",
-              location: "Taxiway C - Circuito Central",
-              lastUpdate: `Falha detectada: ${new Date().toTimeString().slice(0, 5)} - Equipe técnica notificada`
+              location: "Taxiway C - Central Circuit",
+              lastUpdate: `Failure detected: ${new Date().toTimeString().slice(0, 5)} - Technical team notified`
             },
             {
               id: "equip-2",
-              name: "Radar de Superfície",
+              name: "Surface Radar",
               status: "operational",
-              location: "Radar Primário - Torre Norte",
-              lastUpdate: `Última verificação: ${new Date().toTimeString().slice(0, 5)} - Funcionamento normal`
+              location: "Primary Radar - North Tower",
+              lastUpdate: `Last check: ${new Date().toTimeString().slice(0, 5)} - Normal operation`
             },
             {
               id: "equip-3",
-              name: "Sistema PAPI",
+              name: "PAPI System",
               status: "operational",
-              location: "Pista 27L",
-              lastUpdate: "Intensidade: 100% - Próxima calibração: 25/05"
+              location: "Runway 27L",
+              lastUpdate: "Intensity: 100% - Next calibration: 05/25"
             },
             {
               id: "equip-4",
-              name: "Luzes de Aproximação",
+              name: "Approach Lights",
               status: "operational",
-              location: "ALS Pista 09R",
-              lastUpdate: "Funcionamento normal - Intensidade: 80%"
+              location: "ALS Runway 09R",
+              lastUpdate: "Normal operation - Intensity: 80%"
             },
             {
               id: "equip-5",
               name: "ATIS",
               status: "operational",
-              location: "Transmissão Automática",
-              lastUpdate: "Info BRAVO ativa - Atualizado: 14:00Z"
+              location: "Automatic Transmission",
+              lastUpdate: "Info BRAVO active - Updated: 14:00Z"
             },
             {
               id: "equip-6",
-              name: Math.random() > 0.3 ? "Gerador de Emergência" : "UPS - Sistema Principal",
+              name: Math.random() > 0.3 ? "Emergency Generator" : "UPS - Main System",
               status: Math.random() > 0.7 ? "operational" : "warning",
-              location: "Gerador #2 - Terminal 3",
-              lastUpdate: `Nível de combustível: ${Math.round(40 + Math.random() * 10)}% - Abastecimento agendado`
+              location: "Generator #2 - Terminal 3",
+              lastUpdate: `Fuel level: ${Math.round(40 + Math.random() * 10)}% - Refueling scheduled`
             }
           ]
         });
@@ -189,42 +189,42 @@ export async function registerRoutes(app: Express): Promise<Server> {
           statusItems: [
             {
               id: "runway-main",
-              title: "Pista Principal (09R/27L)",
+              title: "Main Runway (09R/27L)",
               status: Math.random() > 0.9 ? "warning" : "operational",
               metrics: [
-                { label: "Temperatura", value: `${(27.5 + Math.random() * 0.5).toFixed(1)}°C` },
-                { label: "Coef. Atrito", value: (0.82 + Math.random() * 0.03 - 0.015).toFixed(2) },
-                { label: "Chuva", value: Math.random() > 0.8 ? `${(Math.random() * 2).toFixed(1)} mm/h` : "0.0 mm/h" }
+                { label: "Temperature", value: `${(27.5 + Math.random() * 0.5).toFixed(1)}°C` },
+                { label: "Friction", value: (0.82 + Math.random() * 0.03 - 0.015).toFixed(2) },
+                { label: "Rain", value: Math.random() > 0.8 ? `${(Math.random() * 2).toFixed(1)} mm/h` : "0.0 mm/h" }
               ]
             },
             {
               id: "runway-aux",
-              title: "Pista Auxiliar (09L/27R)",
+              title: "Secondary Runway (09L/27R)",
               status: "operational",
               metrics: [
-                { label: "Temperatura", value: `${(28.1 + Math.random() * 0.5).toFixed(1)}°C` },
-                { label: "Coef. Atrito", value: (0.78 + Math.random() * 0.03 - 0.015).toFixed(2) },
-                { label: "Chuva", value: Math.random() > 0.8 ? `${(Math.random() * 2).toFixed(1)} mm/h` : "0.0 mm/h" }
+                { label: "Temperature", value: `${(28.1 + Math.random() * 0.5).toFixed(1)}°C` },
+                { label: "Friction", value: (0.78 + Math.random() * 0.03 - 0.015).toFixed(2) },
+                { label: "Rain", value: Math.random() > 0.8 ? `${(Math.random() * 2).toFixed(1)} mm/h` : "0.0 mm/h" }
               ]
             },
             {
               id: "weather-system",
-              title: "Sistema Meteorológico",
+              title: "Weather System",
               status: Math.random() > 0.7 ? "warning" : "operational",
               metrics: [
-                { label: "Visibilidade", value: `${(5.2 + Math.random() * 1 - 0.5).toFixed(1)} km` },
-                { label: "Vento", value: `${Math.round(12 + Math.random() * 2)} kt ${Math.round(270 + Math.random() * 20 - 10)}°` },
-                { label: "Trovões", value: Math.random() > 0.7 ? `Detectados (${Math.round(15 + Math.random() * 5)}km)` : "Não detectados" }
+                { label: "Visibility", value: `${(5.2 + Math.random() * 1 - 0.5).toFixed(1)} km` },
+                { label: "Wind", value: `${Math.round(12 + Math.random() * 2)} kt ${Math.round(270 + Math.random() * 20 - 10)}°` },
+                { label: "Thunder", value: Math.random() > 0.7 ? `Detected (${Math.round(15 + Math.random() * 5)}km)` : "Not detected" }
               ]
             },
             {
               id: "lighting-system",
-              title: "Sistemas de Iluminação",
+              title: "Lighting Systems",
               status: "critical",
               metrics: [
-                { label: "Taxiway C", value: "Falha parcial" },
+                { label: "Taxiway C", value: "Partial failure" },
                 { label: "PAPI 27L", value: "100%" },
-                { label: "Backup", value: "Ativo" }
+                { label: "Backup", value: "Active" }
               ]
             }
           ]
@@ -234,10 +234,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
       case 4: // Occasional critical alert
         if (Math.random() > 0.7) {
           const alertTypes = [
-            "Detecção de objeto estranho (FOD) na pista 09R/27L - Equipe de inspeção mobilizada - ETA: 3 min",
-            "Rajada de vento superior a 25kt detectada - Direção: 290° - Duração: 45 segundos",
-            "Falha na comunicação com sensor de atrito da pista 09L - Verificação manual necessária",
-            "Veículo não autorizado próximo à taxiway D - Equipe de segurança acionada"
+            "Foreign Object Debris (FOD) detected on runway 09R/27L - Inspection team mobilized - ETA: 3 min",
+            "Wind gust over 25kt detected - Direction: 290° - Duration: 45 seconds",
+            "Communication failure with runway 09L friction sensor - Manual verification required",
+            "Unauthorized vehicle near taxiway D - Security team dispatched"
           ];
           
           broadcast({
