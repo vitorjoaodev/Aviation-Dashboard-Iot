@@ -284,7 +284,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         visibility: weatherData.visibility,
         visibilityStatus: weatherData.visibility < 5 ? "reduced" : "normal",
         qnh: weatherData.qnh,
-        qnhTrend: "Estável",
+        qnhTrend: "Stable",
         windDirection: weatherData.windDirection,
         windSpeed: weatherData.windSpeed,
         windGust: weatherData.windGust,
@@ -362,16 +362,16 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const analysisData = {
         incidentsByCategory: [
           { name: "FOD", value: 14, color: "#D50000" },
-          { name: "Clima", value: 8, color: "#F9A825" },
-          { name: "Equipamentos", value: 12, color: "#1A73E8" },
-          { name: "Outros", value: 10, color: "#616E7C" }
+          { name: "Weather", value: 8, color: "#F9A825" },
+          { name: "Equipment", value: 12, color: "#1A73E8" },
+          { name: "Others", value: 10, color: "#616E7C" }
         ],
         totalIncidents: 44,
         responseTime: [
           { name: "FOD", value: 3.2 },
-          { name: "Clima", value: 4.8 },
+          { name: "Weather", value: 4.8 },
           { name: "Equip.", value: 5.1 },
-          { name: "Outros", value: 4.1 }
+          { name: "Others", value: 4.1 }
         ],
         responseTimeStats: {
           average: 4.3,
@@ -380,26 +380,26 @@ export async function registerRoutes(app: Express): Promise<Server> {
         },
         maintenancePredictions: [
           { 
-            equipment: "Sistema PAPI - Pista 09R", 
-            prediction: "Manutenção preventiva necessária em 8 dias", 
-            reason: "Intensidade reduzida detectada",
+            equipment: "PAPI System - Runway 09R", 
+            prediction: "Preventive maintenance needed in 8 days", 
+            reason: "Reduced intensity detected",
             status: "warning"
           },
           { 
-            equipment: "Sensor de Atrito - Equip. #3", 
-            prediction: "Calibração recomendada em 12 dias", 
-            reason: "Desvio padrão aumentando",
+            equipment: "Friction Sensor - Equip. #3", 
+            prediction: "Calibration recommended in 12 days", 
+            reason: "Standard deviation increasing",
             status: "warning"
           },
           { 
-            equipment: "Radar de Superfície - Torre Sul", 
-            prediction: "Verificação agendada em 30 dias", 
-            reason: "Operando normalmente",
+            equipment: "Surface Radar - South Tower", 
+            prediction: "Check scheduled in 30 days", 
+            reason: "Operating normally",
             status: "primary"
           }
         ],
         incidentTrend: Array.from({ length: 7 }, (_, i) => {
-          const date = new Date(Date.now() - i * 86400000).toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit' });
+          const date = new Date(Date.now() - i * 86400000).toLocaleDateString('en-US', { month: '2-digit', day: '2-digit' });
           return {
             date,
             critical: Math.floor(Math.random() * 5),
