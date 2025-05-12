@@ -85,10 +85,10 @@ export default function Runways() {
   // Mock FOD detection logs
   const fodDetectionLogs = [
     { id: "FOD-2775", timestamp: "14:32 - 18/05/2023", location: "09R/27L near Taxiway B", size: "15cm", material: "Metal", status: "Removed" },
-    { id: "FOD-2774", timestamp: "09:17 - 18/05/2023", location: "27L próximo à cabeceira", size: "5cm", material: "Plástico", status: "Removido" },
-    { id: "FOD-2773", timestamp: "21:45 - 17/05/2023", location: "09L/27R meio da pista", size: "8cm", material: "Borracha", status: "Removido" },
-    { id: "FOD-2772", timestamp: "15:22 - 16/05/2023", location: "09R 200m da cabeceira", size: "3cm", material: "Metálico", status: "Removido" },
-    { id: "FOD-2771", timestamp: "10:38 - 16/05/2023", location: "09L próximo ao taxiway A", size: "10cm", material: "Tecido", status: "Removido" }
+    { id: "FOD-2774", timestamp: "09:17 - 18/05/2023", location: "27L near threshold", size: "5cm", material: "Plastic", status: "Removed" },
+    { id: "FOD-2773", timestamp: "21:45 - 17/05/2023", location: "09L/27R middle of runway", size: "8cm", material: "Rubber", status: "Removed" },
+    { id: "FOD-2772", timestamp: "15:22 - 16/05/2023", location: "09R 200m from threshold", size: "3cm", material: "Metal", status: "Removed" },
+    { id: "FOD-2771", timestamp: "10:38 - 16/05/2023", location: "09L near taxiway A", size: "10cm", material: "Fabric", status: "Removed" }
   ];
   
   // Runway condition metrics
@@ -103,7 +103,7 @@ export default function Runways() {
         currentTime={formattedTime} 
         notificationCount={notificationCount}
         userName="Operador"
-        currentRoute="/pistas"
+        currentRoute="/runways"
       />
       
       <main className="flex-1 p-4 md:p-6 overflow-auto space-y-6">
