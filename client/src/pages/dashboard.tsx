@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { StatusOverview } from "@/components/dashboard/status-overview";
@@ -9,6 +9,7 @@ import { IncidentPanel } from "@/components/dashboard/incident-panel";
 import { DataAnalysis } from "@/components/dashboard/data-analysis";
 import { useDashboard } from "@/contexts/dashboard-context";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import { AlertSound } from "@/components/ui/alert-sound";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
 
@@ -19,10 +20,23 @@ export default function Dashboard() {
     currentTime,
     notificationCount
   } = useDashboard();
+  
+  // Estado para controlar a reprodução do som
+  const [playCriticalSound, setPlayCriticalSound] = useState(false);
 
   useEffect(() => {
     document.title = "GRU IOT - Dashboard SGSO";
   }, []);
+  
+  // Ativar o som quando um alerta crítico aparecer
+  useEffect(() => {
+    if (criticalAlert) {
+      setPlayCriticalSound(true);
+      // Desativar o som após 3 segundos
+      const timer = setTimeout(() => setPlayCriticalSound(false), 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [criticalAlert]);
 
   const formattedTime = format(currentTime, "dd/MM/yyyy - HH:mm:ss", { locale: ptBR });
 
@@ -66,6 +80,9 @@ export default function Dashboard() {
         version="2.1.5" 
         lastUpdate="18/05/2023" 
       />
+      
+      {/* Componente de som para alertas críticos */}
+      <AlertSound play={playCriticalSound} />
     </div>
   );
 }

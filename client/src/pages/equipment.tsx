@@ -163,7 +163,10 @@ export default function Equipment() {
                         />
                       ))}
                     </Pie>
-                    <Tooltip formatter={(value, name) => [`${value} (${((value / totalEquipment) * 100).toFixed(0)}%)`, name]} />
+                    <Tooltip formatter={(value, name) => {
+                      const percentage = ((Number(value) / totalEquipment) * 100).toFixed(0);
+                      return [`${value} (${percentage}%)`, name];
+                    }} />
                   </PieChart>
                 </ResponsiveContainer>
               </div>
