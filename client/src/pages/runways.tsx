@@ -527,33 +527,33 @@ export default function Runways() {
                         <span className="ml-2">32/32</span>
                       </div>
                       <div>
-                        <span className="text-neutral-500 dark:text-neutral-400">Última verificação:</span>
-                        <span className="ml-2">06:00 - 18/05</span>
+                        <span className="text-neutral-500 dark:text-neutral-400">Last check:</span>
+                        <span className="ml-2">06:00 - 05/18</span>
                       </div>
                     </div>
                   </div>
                   
                   <div className="p-4 bg-neutral-50 dark:bg-darkbg-card rounded-lg">
-                    <h3 className="font-medium mb-2">Alertas de Manutenção</h3>
+                    <h3 className="font-medium mb-2">Maintenance Alerts</h3>
                     <div className="text-sm">
                       <div className="mb-1">
-                        <span className="text-neutral-500 dark:text-neutral-400">Próxima calibração:</span>
-                        <span className="ml-2">28/05/2023</span>
+                        <span className="text-neutral-500 dark:text-neutral-400">Next calibration:</span>
+                        <span className="ml-2">05/28/2023</span>
                       </div>
                       <div>
-                        <span className="text-neutral-500 dark:text-neutral-400">Observações:</span>
-                        <span className="ml-2">Sistema funcionando dentro dos parâmetros normais.</span>
+                        <span className="text-neutral-500 dark:text-neutral-400">Notes:</span>
+                        <span className="ml-2">System functioning within normal parameters.</span>
                       </div>
                     </div>
                   </div>
                 </div>
                 
                 <div className="p-4 bg-neutral-50 dark:bg-darkbg-card rounded-lg">
-                  <h3 className="font-medium mb-4">Capacidade de Detecção</h3>
+                  <h3 className="font-medium mb-4">Detection Capability</h3>
                   <div className="space-y-4">
                     <div>
                       <div className="flex justify-between mb-1 text-sm">
-                        <span>Objetos metálicos &gt; 2cm</span>
+                        <span>Metal objects &gt; 2cm</span>
                         <span>100%</span>
                       </div>
                       <div className="w-full bg-neutral-200 dark:bg-neutral-700 rounded-full h-2.5">
@@ -562,7 +562,7 @@ export default function Runways() {
                     </div>
                     <div>
                       <div className="flex justify-between mb-1 text-sm">
-                        <span>Objetos não-metálicos &gt; 5cm</span>
+                        <span>Non-metal objects &gt; 5cm</span>
                         <span>95%</span>
                       </div>
                       <div className="w-full bg-neutral-200 dark:bg-neutral-700 rounded-full h-2.5">
