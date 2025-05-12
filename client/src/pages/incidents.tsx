@@ -77,32 +77,32 @@ export default function Incidents() {
     info: incidents.filter(inc => inc.severity === "info").length
   };
   
-  // Mock historical incidents data
+  // Mock historical incidents data - TRANSLATED
   const pastIncidents = [
-    { id: "FOD-2769", timestamp: "09:12 - 17/05/2023", title: "FOD reportado na pista 09R", severity: "warning" as IncidentSeverity, status: "Concluído" },
-    { id: "OPS-5518", timestamp: "14:35 - 16/05/2023", title: "Aeronave reportou problemas com luzes de aproximação", severity: "critical" as IncidentSeverity, status: "Concluído" },
-    { id: "WX-1122", timestamp: "10:28 - 16/05/2023", title: "Raios detectados a 8km - Atividades ao ar livre suspensas", severity: "critical" as IncidentSeverity, status: "Concluído" },
-    { id: "EQP-3378", timestamp: "08:15 - 15/05/2023", title: "Falha no radar secundário - Backup ativado", severity: "warning" as IncidentSeverity, status: "Concluído" },
-    { id: "OPS-5515", timestamp: "15:40 - 14/05/2023", title: "Inspeção de rotina concluída - Todas as pistas", severity: "info" as IncidentSeverity, status: "Concluído" },
-    { id: "EQP-3375", timestamp: "11:22 - 14/05/2023", title: "Manutenção preventiva no sistema PAPI", severity: "info" as IncidentSeverity, status: "Concluído" },
+    { id: "FOD-2769", timestamp: "09:12 - 05/17/2023", title: "FOD reported on runway 09R", severity: "warning" as IncidentSeverity, status: "Completed" },
+    { id: "OPS-5518", timestamp: "14:35 - 05/16/2023", title: "Aircraft reported issues with approach lights", severity: "critical" as IncidentSeverity, status: "Completed" },
+    { id: "WX-1122", timestamp: "10:28 - 05/16/2023", title: "Lightning detected at 8km - Outdoor activities suspended", severity: "critical" as IncidentSeverity, status: "Completed" },
+    { id: "EQP-3378", timestamp: "08:15 - 05/15/2023", title: "Secondary radar failure - Backup activated", severity: "warning" as IncidentSeverity, status: "Completed" },
+    { id: "OPS-5515", timestamp: "15:40 - 05/14/2023", title: "Routine inspection completed - All runways", severity: "info" as IncidentSeverity, status: "Completed" },
+    { id: "EQP-3375", timestamp: "11:22 - 05/14/2023", title: "Preventive maintenance on PAPI system", severity: "info" as IncidentSeverity, status: "Completed" },
   ];
   
-  // Response protocol data
+  // Response protocol data - TRANSLATED
   const responseProtocols = [
-    { id: "RP-001", name: "Protocolo FOD", type: "Segurança", description: "Procedimentos para detecção e remoção de objetos estranhos nas pistas", lastUpdated: "01/05/2023" },
-    { id: "RP-002", name: "Protocolo Condições Meteorológicas Adversas", type: "Meteorologia", description: "Ações de mitigação para temporais, raios e visibilidade reduzida", lastUpdated: "15/04/2023" },
-    { id: "RP-003", name: "Protocolo Falha de Equipamentos Críticos", type: "Técnico", description: "Procedimentos para falhas em sistemas de iluminação, radares e comunicação", lastUpdated: "03/05/2023" },
-    { id: "RP-004", name: "Protocolo Evacuação de Emergência", type: "Segurança", description: "Procedimentos para evacuação de áreas específicas do aeroporto", lastUpdated: "28/04/2023" },
-    { id: "RP-005", name: "Protocolo Falha de Energia", type: "Técnico", description: "Ações para falhas no sistema principal de energia e ativação de backups", lastUpdated: "10/05/2023" },
+    { id: "RP-001", name: "FOD Protocol", type: "Safety", description: "Procedures for detection and removal of foreign objects on runways", lastUpdated: "05/01/2023" },
+    { id: "RP-002", name: "Adverse Weather Conditions Protocol", type: "Meteorology", description: "Mitigation actions for storms, lightning and reduced visibility", lastUpdated: "04/15/2023" },
+    { id: "RP-003", name: "Critical Equipment Failure Protocol", type: "Technical", description: "Procedures for failures in lighting systems, radars and communication", lastUpdated: "05/03/2023" },
+    { id: "RP-004", name: "Emergency Evacuation Protocol", type: "Safety", description: "Procedures for evacuation of specific airport areas", lastUpdated: "04/28/2023" },
+    { id: "RP-005", name: "Power Failure Protocol", type: "Technical", description: "Actions for main power system failures and backup activation", lastUpdated: "05/10/2023" },
   ];
   
-  // Emergency contacts
+  // Emergency contacts - TRANSLATED
   const emergencyContacts = [
-    { name: "Centro de Operações Aeroportuárias", phone: "11 2445-2945", email: "cop@guarulhos.aero", responseTime: "Imediato" },
-    { name: "Equipe Técnica (24h)", phone: "11 2445-3050", email: "tecnico@guarulhos.aero", responseTime: "< 5 min" },
-    { name: "Manutenção", phone: "11 2445-3122", email: "manutencao@guarulhos.aero", responseTime: "< 15 min" },
-    { name: "Corpo de Bombeiros", phone: "11 2445-2988", email: "bombeiros@guarulhos.aero", responseTime: "< 3 min" },
-    { name: "Segurança", phone: "11 2445-2999", email: "seguranca@guarulhos.aero", responseTime: "< 5 min" },
+    { name: "Airport Operations Center", phone: "11 2445-2945", email: "cop@guarulhos.aero", responseTime: "Immediate" },
+    { name: "Technical Team (24h)", phone: "11 2445-3050", email: "tecnico@guarulhos.aero", responseTime: "< 5 min" },
+    { name: "Maintenance", phone: "11 2445-3122", email: "manutencao@guarulhos.aero", responseTime: "< 15 min" },
+    { name: "Fire Department", phone: "11 2445-2988", email: "bombeiros@guarulhos.aero", responseTime: "< 3 min" },
+    { name: "Security", phone: "11 2445-2999", email: "seguranca@guarulhos.aero", responseTime: "< 5 min" },
   ];
   
   return (
@@ -110,7 +110,7 @@ export default function Incidents() {
       <Header 
         currentTime={formattedTime} 
         notificationCount={notificationCount}
-        userName="Operador"
+        userName="Operator"
         currentRoute="/incidents"
       />
       
@@ -328,17 +328,19 @@ export default function Incidents() {
                                     : "bg-neutral-500"
                               )}
                             >
-                              {incident.severity === "critical" ? "Crítico" : incident.severity === "warning" ? "Atenção" : "Informativo"}
+                              {incident.severity === "critical" ? "Critical" : incident.severity === "warning" ? "Warning" : "Informational"}
                             </Badge>
                           </td>
-                          <td className="py-2 px-2">{incident.status || "Em análise"}</td>
+                          <td className="py-2 px-2">{incident.status || "Analyzing"}</td>
                           <td className="py-2 px-2">
                             <div className="flex space-x-1">
-                              <Button variant="outline" size="sm" className="h-7 px-2">
+                              <Button 
+                                variant="outline" 
+                                size="sm" 
+                                className="h-7 px-2"
+                                onClick={() => setSelectedIncident(incident.id)}
+                              >
                                 <span className="material-icons text-sm">visibility</span>
-                              </Button>
-                              <Button variant="outline" size="sm" className="h-7 px-2">
-                                <span className="material-icons text-sm">edit</span>
                               </Button>
                             </div>
                           </td>
@@ -349,642 +351,234 @@ export default function Incidents() {
                 </div>
               </CardContent>
             </Card>
-            
-            <Card>
-              <CardHeader className="pb-2">
-                <CardTitle className="text-lg">Mapa de Incidentes</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="relative w-full h-96 rounded-lg overflow-hidden bg-neutral-100 dark:bg-darkbg-card">
-                  <img 
-                    src="https://images.unsplash.com/photo-1544950471-e5916b5c36bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600" 
-                    alt="Mapa do aeroporto com incidentes" 
-                    className="w-full h-full object-cover opacity-70 dark:opacity-50"
-                  />
-                  
-                  {/* Overlay elements - incident locations */}
-                  <div className="absolute top-0 left-0 right-0 bottom-0">
-                    {/* Simulated incident locations */}
-                    <div className="absolute top-[30%] left-[40%]">
-                      <div className="relative">
-                        <span className="material-icons text-critical animate-pulse">warning</span>
-                        <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-1 bg-black bg-opacity-70 text-white text-xs py-1 px-2 rounded whitespace-nowrap">
-                          Detecção FOD
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="absolute top-[60%] left-[30%]">
-                      <div className="relative">
-                        <span className="material-icons text-critical">warning</span>
-                        <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-1 bg-black bg-opacity-70 text-white text-xs py-1 px-2 rounded whitespace-nowrap">
-                          Falha iluminação
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <div className="absolute top-[25%] left-[70%]">
-                      <div className="relative">
-                        <span className="material-icons text-warning">warning</span>
-                        <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-1 bg-black bg-opacity-70 text-white text-xs py-1 px-2 rounded whitespace-nowrap">
-                          Alerta tempestade
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Controls */}
-                  <div className="absolute bottom-2 right-2 flex space-x-1">
-                    <Button size="icon" className="bg-white dark:bg-neutral-800 p-1 rounded-full shadow h-7 w-7">
-                      <span className="material-icons text-sm">add</span>
-                    </Button>
-                    <Button size="icon" className="bg-white dark:bg-neutral-800 p-1 rounded-full shadow h-7 w-7">
-                      <span className="material-icons text-sm">remove</span>
-                    </Button>
-                    <Button size="icon" className="bg-white dark:bg-neutral-800 p-1 rounded-full shadow h-7 w-7">
-                      <span className="material-icons text-sm">layers</span>
-                    </Button>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
           </TabsContent>
           
           <TabsContent value="history" className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <Card className="md:col-span-2">
-                <CardHeader className="pb-2">
-                  <CardTitle className="text-lg">Histórico de Incidentes</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="overflow-x-auto">
-                    <table className="w-full text-sm">
-                      <thead>
-                        <tr className="border-b border-neutral-200 dark:border-neutral-700">
-                          <th className="text-left font-medium py-2 px-2">ID</th>
-                          <th className="text-left font-medium py-2 px-2">Timestamp</th>
-                          <th className="text-left font-medium py-2 px-2">Título</th>
-                          <th className="text-left font-medium py-2 px-2">Severidade</th>
-                          <th className="text-left font-medium py-2 px-2">Status</th>
-                          <th className="text-left font-medium py-2 px-2">Ações</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {pastIncidents.map((incident, index) => (
-                          <tr 
-                            key={index} 
-                            className={cn(
-                              "border-b border-neutral-200 dark:border-neutral-700 last:border-0",
-                              index % 2 === 0 ? "bg-neutral-50 dark:bg-darkbg-card" : ""
-                            )}
-                          >
-                            <td className="py-2 px-2">{incident.id}</td>
-                            <td className="py-2 px-2">{incident.timestamp}</td>
-                            <td className="py-2 px-2 max-w-[300px] truncate">{incident.title}</td>
-                            <td className="py-2 px-2">
-                              <Badge
-                                className={cn(
-                                  incident.severity === "critical" 
-                                    ? "bg-critical" 
-                                    : incident.severity === "warning" 
-                                      ? "bg-warning text-black" 
-                                      : "bg-neutral-500"
-                                )}
-                              >
-                                {incident.severity === "critical" ? "Crítico" : incident.severity === "warning" ? "Atenção" : "Informativo"}
-                              </Badge>
-                            </td>
-                            <td className="py-2 px-2">{incident.status}</td>
-                            <td className="py-2 px-2">
-                              <Button variant="outline" size="sm" className="h-7 px-2 text-xs">
-                                <span className="material-icons text-sm mr-1">description</span>
-                                Relatório
-                              </Button>
-                            </td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                  
-                  <div className="mt-4 flex justify-between items-center">
-                    <div className="text-sm text-neutral-500">
-                      Mostrando 6 de 124 registros
-                    </div>
-                    <div className="flex space-x-1">
-                      <Button variant="outline" size="sm" className="h-7 w-7 p-0">
-                        <span className="material-icons text-sm">chevron_left</span>
-                      </Button>
-                      <Button variant="outline" size="sm" className="h-7 w-7 p-0 bg-primary text-white">
-                        1
-                      </Button>
-                      <Button variant="outline" size="sm" className="h-7 w-7 p-0">
-                        2
-                      </Button>
-                      <Button variant="outline" size="sm" className="h-7 w-7 p-0">
-                        3
-                      </Button>
-                      <Button variant="outline" size="sm" className="h-7 w-7 p-0">
-                        <span className="material-icons text-sm">more_horiz</span>
-                      </Button>
-                      <Button variant="outline" size="sm" className="h-7 w-7 p-0">
-                        <span className="material-icons text-sm">chevron_right</span>
-                      </Button>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-              
-              <Card>
-                <CardHeader className="pb-2">
-                  <CardTitle className="text-lg">Tendência de Incidentes</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="h-64">
-                    <ResponsiveContainer width="100%" height="100%">
-                      <LineChart
-                        data={analysisData.incidentTrend}
-                        margin={{ top: 10, right: 10, left: 0, bottom: 10 }}
-                      >
-                        <CartesianGrid strokeDasharray="3 3" opacity={0.2} />
-                        <XAxis dataKey="date" />
-                        <YAxis />
-                        <Tooltip />
-                        <Legend />
-                        <Line type="monotone" dataKey="critical" stroke="#D50000" name="Crítico" />
-                        <Line type="monotone" dataKey="warning" stroke="#F9A825" name="Atenção" />
-                        <Line type="monotone" dataKey="info" stroke="#616E7C" name="Info" />
-                      </LineChart>
-                    </ResponsiveContainer>
-                  </div>
-                  
-                  <div className="mt-4 p-3 bg-neutral-50 dark:bg-darkbg-card rounded-lg">
-                    <h3 className="font-medium mb-2">Estatísticas do Período</h3>
-                    <div className="space-y-1 text-sm">
-                      <div className="flex justify-between">
-                        <span>Total de incidentes:</span>
-                        <span>{analysisData.totalIncidents}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>Incidentes críticos:</span>
-                        <span>{analysisData.incidentsByCategory.find(i => i.name === "FOD")?.value || 0}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>Tendência:</span>
-                        <span className="text-success flex items-center">
-                          <span className="material-icons text-sm mr-1">arrow_downward</span>
-                          -12%
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-            
             <Card>
               <CardHeader className="pb-2">
-                <CardTitle className="text-lg">Categorias de Incidentes</CardTitle>
+                <div className="flex justify-between items-center">
+                  <CardTitle className="text-lg">Incident History</CardTitle>
+                  <div className="flex items-center space-x-2">
+                    <div className="relative">
+                      <span className="absolute inset-y-0 left-0 flex items-center pl-2">
+                        <span className="material-icons text-neutral-400 text-sm">search</span>
+                      </span>
+                      <input
+                        className="bg-neutral-100 dark:bg-neutral-800 py-1 pl-8 pr-4 rounded-md w-64 text-sm placeholder:text-neutral-400"
+                        placeholder="Search in history..."
+                        type="text"
+                      />
+                    </div>
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="bg-neutral-100 dark:bg-neutral-800"
+                    >
+                      <span className="material-icons text-sm mr-1">filter_list</span>
+                      Filter
+                    </Button>
+                  </div>
+                </div>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-                  <div className="col-span-1">
-                    <div className="h-48 flex justify-center">
-                      <ResponsiveContainer width="100%" height="100%">
-                        <PieChart>
-                          <Pie
-                            data={analysisData.incidentsByCategory}
-                            cx="50%"
-                            cy="50%"
-                            innerRadius={30}
-                            outerRadius={50}
-                            paddingAngle={1}
-                            dataKey="value"
-                          >
-                            {analysisData.incidentsByCategory.map((entry, index) => (
-                              <Cell 
-                                key={`cell-${index}`} 
-                                fill={entry.color} 
-                              />
-                            ))}
-                          </Pie>
-                          <Tooltip formatter={(value, name) => [`${value} (${((value as number / analysisData.totalIncidents) * 100).toFixed(0)}%)`, name]} />
-                          <Legend />
-                        </PieChart>
-                      </ResponsiveContainer>
-                    </div>
-                  </div>
-                  
-                  <div className="md:col-span-3">
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                      {analysisData.incidentsByCategory.map((category, index) => (
-                        <div key={index} className="bg-neutral-50 dark:bg-darkbg-card p-3 rounded-lg text-center">
-                          <div className="w-8 h-8 rounded-full mx-auto mb-2" style={{ backgroundColor: category.color }}></div>
-                          <div className="font-medium">{category.name}</div>
-                          <div className="text-xl mt-1">{category.value}</div>
-                          <div className="text-xs text-neutral-500 mt-1">
-                            {((category.value / analysisData.totalIncidents) * 100).toFixed(0)}% do total
-                          </div>
-                        </div>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="border-b border-neutral-200 dark:border-neutral-700">
+                        <th className="text-left font-medium py-2 px-2">ID</th>
+                        <th className="text-left font-medium py-2 px-2">Timestamp</th>
+                        <th className="text-left font-medium py-2 px-2">Title</th>
+                        <th className="text-left font-medium py-2 px-2">Severity</th>
+                        <th className="text-left font-medium py-2 px-2">Status</th>
+                        <th className="text-left font-medium py-2 px-2">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {pastIncidents.map((incident, index) => (
+                        <tr 
+                          key={index} 
+                          className={cn(
+                            "border-b border-neutral-200 dark:border-neutral-700 last:border-0",
+                            index % 2 === 0 ? "bg-neutral-50 dark:bg-darkbg-card" : ""
+                          )}
+                        >
+                          <td className="py-2 px-2">{incident.id}</td>
+                          <td className="py-2 px-2">{incident.timestamp}</td>
+                          <td className="py-2 px-2 max-w-[300px] truncate">{incident.title}</td>
+                          <td className="py-2 px-2">
+                            <Badge
+                              className={cn(
+                                incident.severity === "critical" 
+                                  ? "bg-critical" 
+                                  : incident.severity === "warning" 
+                                    ? "bg-warning text-black" 
+                                    : "bg-neutral-500"
+                              )}
+                            >
+                              {incident.severity === "critical" ? "Critical" : incident.severity === "warning" ? "Warning" : "Informational"}
+                            </Badge>
+                          </td>
+                          <td className="py-2 px-2">{incident.status}</td>
+                          <td className="py-2 px-2">
+                            <div className="flex space-x-1">
+                              <Button variant="outline" size="sm" className="h-7 px-2">
+                                <span className="material-icons text-sm">visibility</span>
+                              </Button>
+                              <Button variant="outline" size="sm" className="h-7 px-2">
+                                <span className="material-icons text-sm">description</span>
+                              </Button>
+                            </div>
+                          </td>
+                        </tr>
                       ))}
-                    </div>
-                    
-                    <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="bg-neutral-50 dark:bg-darkbg-card p-4 rounded-lg">
-                        <h3 className="font-medium mb-3">Incidentes por Localização</h3>
-                        <div className="space-y-2">
-                          <div>
-                            <div className="flex justify-between mb-1 text-sm">
-                              <span>Pista 09R/27L</span>
-                              <span>42%</span>
-                            </div>
-                            <div className="w-full bg-neutral-200 dark:bg-neutral-700 rounded-full h-2">
-                              <div className="bg-primary h-2 rounded-full" style={{ width: '42%' }}></div>
-                            </div>
-                          </div>
-                          <div>
-                            <div className="flex justify-between mb-1 text-sm">
-                              <span>Pista 09L/27R</span>
-                              <span>28%</span>
-                            </div>
-                            <div className="w-full bg-neutral-200 dark:bg-neutral-700 rounded-full h-2">
-                              <div className="bg-primary h-2 rounded-full" style={{ width: '28%' }}></div>
-                            </div>
-                          </div>
-                          <div>
-                            <div className="flex justify-between mb-1 text-sm">
-                              <span>Taxiways</span>
-                              <span>18%</span>
-                            </div>
-                            <div className="w-full bg-neutral-200 dark:bg-neutral-700 rounded-full h-2">
-                              <div className="bg-primary h-2 rounded-full" style={{ width: '18%' }}></div>
-                            </div>
-                          </div>
-                          <div>
-                            <div className="flex justify-between mb-1 text-sm">
-                              <span>Outros</span>
-                              <span>12%</span>
-                            </div>
-                            <div className="w-full bg-neutral-200 dark:bg-neutral-700 rounded-full h-2">
-                              <div className="bg-primary h-2 rounded-full" style={{ width: '12%' }}></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <div className="bg-neutral-50 dark:bg-darkbg-card p-4 rounded-lg">
-                        <h3 className="font-medium mb-3">Principais Causas</h3>
-                        <div className="space-y-2">
-                          <div>
-                            <div className="flex justify-between mb-1 text-sm">
-                              <span>Condições meteorológicas</span>
-                              <span>35%</span>
-                            </div>
-                            <div className="w-full bg-neutral-200 dark:bg-neutral-700 rounded-full h-2">
-                              <div className="bg-primary h-2 rounded-full" style={{ width: '35%' }}></div>
-                            </div>
-                          </div>
-                          <div>
-                            <div className="flex justify-between mb-1 text-sm">
-                              <span>Falhas de equipamentos</span>
-                              <span>30%</span>
-                            </div>
-                            <div className="w-full bg-neutral-200 dark:bg-neutral-700 rounded-full h-2">
-                              <div className="bg-primary h-2 rounded-full" style={{ width: '30%' }}></div>
-                            </div>
-                          </div>
-                          <div>
-                            <div className="flex justify-between mb-1 text-sm">
-                              <span>Objetos estranhos</span>
-                              <span>25%</span>
-                            </div>
-                            <div className="w-full bg-neutral-200 dark:bg-neutral-700 rounded-full h-2">
-                              <div className="bg-primary h-2 rounded-full" style={{ width: '25%' }}></div>
-                            </div>
-                          </div>
-                          <div>
-                            <div className="flex justify-between mb-1 text-sm">
-                              <span>Erros operacionais</span>
-                              <span>10%</span>
-                            </div>
-                            <div className="w-full bg-neutral-200 dark:bg-neutral-700 rounded-full h-2">
-                              <div className="bg-primary h-2 rounded-full" style={{ width: '10%' }}></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                    </tbody>
+                  </table>
+                </div>
+                
+                <div className="flex justify-center mt-4">
+                  <Button variant="outline" size="sm">Load More</Button>
                 </div>
               </CardContent>
             </Card>
           </TabsContent>
           
           <TabsContent value="protocols" className="space-y-4">
+            <Card>
+              <CardHeader className="pb-2">
+                <div className="flex justify-between items-center">
+                  <CardTitle className="text-lg">Response Protocols</CardTitle>
+                  <Button variant="outline" size="sm" className="bg-neutral-100 dark:bg-neutral-800">
+                    <span className="material-icons text-sm mr-1">add</span>
+                    New Protocol
+                  </Button>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {responseProtocols.map(protocol => (
+                    <Card key={protocol.id} className="border border-neutral-200 dark:border-neutral-700">
+                      <CardHeader className="py-3 px-4">
+                        <div className="flex justify-between items-center">
+                          <div>
+                            <CardTitle className="text-base">{protocol.name}</CardTitle>
+                            <CardDescription className="text-xs mt-1">{protocol.type} • Last updated: {protocol.lastUpdated}</CardDescription>
+                          </div>
+                          <Button variant="ghost" size="sm" className="h-8 w-8 p-0">
+                            <span className="material-icons">more_vert</span>
+                          </Button>
+                        </div>
+                      </CardHeader>
+                      <CardContent className="py-3 px-4 border-t border-neutral-200 dark:border-neutral-700">
+                        <p className="text-sm text-neutral-700 dark:text-neutral-300">{protocol.description}</p>
+                        <div className="flex justify-end mt-3">
+                          <Button variant="outline" size="sm" className="h-8">
+                            <span className="material-icons text-sm mr-1">visibility</span>
+                            View details
+                          </Button>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <Card>
                 <CardHeader className="pb-2">
-                  <CardTitle className="text-lg">Contatos de Emergência</CardTitle>
+                  <CardTitle className="text-lg">Emergency Contacts</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-3">
+                  <ul className="space-y-3">
                     {emergencyContacts.map((contact, index) => (
-                      <div 
+                      <li 
                         key={index} 
                         className={cn(
-                          "p-3 rounded-lg border-l-4 border-primary",
-                          index % 2 === 0 ? "bg-neutral-50 dark:bg-darkbg-card" : "bg-white dark:bg-neutral-800"
+                          "p-3 rounded-md text-sm",
+                          index % 2 === 0 ? "bg-neutral-50 dark:bg-darkbg-card" : ""
                         )}
                       >
                         <div className="font-medium">{contact.name}</div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-1 mt-1">
-                          <div className="flex items-center text-sm text-neutral-600 dark:text-neutral-300">
-                            <span className="material-icons text-sm mr-1">phone</span>
-                            <span>{contact.phone}</span>
-                          </div>
-                          <div className="flex items-center text-sm text-neutral-600 dark:text-neutral-300">
-                            <span className="material-icons text-sm mr-1">email</span>
-                            <span>{contact.email}</span>
-                          </div>
+                        <div className="flex justify-between mt-1 text-neutral-600 dark:text-neutral-400">
+                          <div>{contact.phone}</div>
+                          <div>Response: {contact.responseTime}</div>
                         </div>
-                        <div className="text-xs text-neutral-500 mt-1">
-                          Tempo de resposta esperado: {contact.responseTime}
-                        </div>
-                      </div>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </CardContent>
               </Card>
               
               <Card className="md:col-span-2">
                 <CardHeader className="pb-2">
-                  <div className="flex justify-between items-center">
-                    <CardTitle className="text-lg">Protocolos de Resposta</CardTitle>
-                    <Button variant="outline" size="sm" className="bg-neutral-100 dark:bg-neutral-800">
-                      <span className="material-icons text-sm mr-1">add</span>
-                      Novo Protocolo
-                    </Button>
-                  </div>
+                  <CardTitle className="text-lg">Protocol Summary</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-4">
-                    {responseProtocols.map((protocol, index) => (
-                      <div key={index} className="bg-neutral-50 dark:bg-darkbg-card p-4 rounded-lg">
-                        <div className="flex justify-between items-start mb-2">
-                          <div>
-                            <h3 className="font-medium">{protocol.name}</h3>
-                            <div className="text-sm text-neutral-600 dark:text-neutral-300">Tipo: {protocol.type}</div>
-                          </div>
-                          <Badge className="bg-primary">{protocol.id}</Badge>
-                        </div>
-                        <p className="text-sm mb-3">{protocol.description}</p>
-                        <div className="flex justify-between items-center text-sm">
-                          <div className="text-neutral-500">
-                            Atualizado: {protocol.lastUpdated}
-                          </div>
-                          <div className="flex space-x-2">
-                            <Button variant="outline" size="sm" className="h-7 text-xs">
-                              <span className="material-icons text-sm mr-1">visibility</span>
-                              Ver
-                            </Button>
-                            <Button variant="outline" size="sm" className="h-7 text-xs">
-                              <span className="material-icons text-sm mr-1">edit</span>
-                              Editar
-                            </Button>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
+                  <div className="space-y-5">
+                    <div>
+                      <h3 className="text-lg font-medium mb-3">Critical Equipment Failure Protocol</h3>
+                      <ul className="list-disc list-inside space-y-2 text-sm ml-2">
+                        <li>Immediate notification to Airport Operations Center</li>
+                        <li>Activation of backup systems when applicable</li>
+                        <li>Priority technician dispatch (max 5 minutes)</li>
+                        <li>Mandatory regular updates (every 15 minutes)</li>
+                        <li>Coordination with ATC for operational adjustments</li>
+                      </ul>
+                    </div>
+                    
+                    <div>
+                      <h3 className="text-lg font-medium mb-3">Adverse Weather Protocol</h3>
+                      <ul className="list-disc list-inside space-y-2 text-sm ml-2">
+                        <li>Continuous monitoring of meteorological systems</li>
+                        <li>Alert issuance at T-60, T-30, and T-15 minutes</li>
+                        <li>Suspension of outdoor activities when lightning detected &lt;10km</li>
+                        <li>Enhanced runway monitoring during precipitation</li>
+                        <li>Activation of reduced visibility procedures when applicable</li>
+                      </ul>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
             </div>
-            
-            <Card>
-              <CardHeader className="pb-2">
-                <CardTitle className="text-lg">Procedimentos de Emergência</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <Tabs defaultValue="fod" className="space-y-4">
-                  <TabsList>
-                    <TabsTrigger value="fod">FOD</TabsTrigger>
-                    <TabsTrigger value="weather">Condições Meteorológicas</TabsTrigger>
-                    <TabsTrigger value="equipment">Falhas de Equipamentos</TabsTrigger>
-                    <TabsTrigger value="evacuation">Evacuação</TabsTrigger>
-                  </TabsList>
-                  
-                  <TabsContent value="fod" className="space-y-4">
-                    <div className="bg-neutral-50 dark:bg-darkbg-card p-4 rounded-lg">
-                      <h3 className="text-lg font-medium mb-3">Protocolo para Detecção de FOD</h3>
-                      
-                      <div className="space-y-3">
-                        <div>
-                          <h4 className="font-medium mb-1">1. Detecção e Avaliação</h4>
-                          <ul className="list-disc pl-5 text-sm space-y-1">
-                            <li>Confirmar a detecção visual ou por radar de FOD</li>
-                            <li>Classificar tamanho, localização e risco potencial</li>
-                            <li>Notificar Torre de Controle imediatamente</li>
-                          </ul>
-                        </div>
-                        
-                        <div>
-                          <h4 className="font-medium mb-1">2. Resposta Imediata</h4>
-                          <ul className="list-disc pl-5 text-sm space-y-1">
-                            <li>Suspender operações na área afetada conforme necessário</li>
-                            <li>Despachar equipe de inspeção/remoção - tempo alvo: 3 min</li>
-                            <li>Registrar incidente no sistema e iniciar comunicações</li>
-                          </ul>
-                        </div>
-                        
-                        <div>
-                          <h4 className="font-medium mb-1">3. Remoção e Verificação</h4>
-                          <ul className="list-disc pl-5 text-sm space-y-1">
-                            <li>Remover objeto seguindo procedimentos de segurança</li>
-                            <li>Verificar área circundante para detecção de objetos adicionais</li>
-                            <li>Documentar objeto removido (fotos, dimensões, material)</li>
-                          </ul>
-                        </div>
-                        
-                        <div>
-                          <h4 className="font-medium mb-1">4. Retomada de Operações</h4>
-                          <ul className="list-disc pl-5 text-sm space-y-1">
-                            <li>Confirmar área segura e livre de obstáculos</li>
-                            <li>Autorizar retomada de operações</li>
-                            <li>Atualizar status no sistema e finalizar registro do incidente</li>
-                          </ul>
-                        </div>
-                      </div>
-                      
-                      <div className="mt-4 flex space-x-2">
-                        <Button>
-                          <span className="material-icons text-sm mr-1">play_arrow</span>
-                          Iniciar Procedimento
-                        </Button>
-                        <Button variant="outline">
-                          <span className="material-icons text-sm mr-1">file_download</span>
-                          Baixar Protocolo
-                        </Button>
-                      </div>
-                    </div>
-                  </TabsContent>
-                  
-                  <TabsContent value="weather">
-                    <div className="bg-neutral-50 dark:bg-darkbg-card p-4 rounded-lg">
-                      <h3 className="text-lg font-medium mb-3">Protocolo para Condições Meteorológicas Adversas</h3>
-                      
-                      <div className="space-y-3">
-                        <div>
-                          <h4 className="font-medium mb-1">1. Monitoramento</h4>
-                          <ul className="list-disc pl-5 text-sm space-y-1">
-                            <li>Acompanhar alertas de radar meteorológico e sistema de detecção de raios</li>
-                            <li>Avaliar distância, direção e velocidade das células de tempestade</li>
-                            <li>Monitorar visibilidade, teto, direção e velocidade do vento</li>
-                          </ul>
-                        </div>
-                        
-                        <div>
-                          <h4 className="font-medium mb-1">2. Raios - Alertas e Ações</h4>
-                          <ul className="list-disc pl-5 text-sm space-y-1">
-                            <li>Alerta Amarelo (≤ 25km): Equipes em alerta</li>
-                            <li>Alerta Laranja (≤ 12km): Suspender operações expostas, implementar restrições</li>
-                            <li>Alerta Vermelho (≤ 5km): Suspender todas as operações externas, evacuar áreas expostas</li>
-                          </ul>
-                        </div>
-                        
-                        <div>
-                          <h4 className="font-medium mb-1">3. Ventos Fortes e Reduções de Visibilidade</h4>
-                          <ul className="list-disc pl-5 text-sm space-y-1">
-                            <li>Implementar restrições operacionais conforme limites estabelecidos</li>
-                            <li>Comunicar condições e restrições a todas as aeronaves e veículos</li>
-                            <li>Verificar objetos soltos e equipamentos em áreas expostas</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </TabsContent>
-                  
-                  <TabsContent value="equipment">
-                    <div className="bg-neutral-50 dark:bg-darkbg-card p-4 rounded-lg">
-                      <h3 className="text-lg font-medium mb-3">Protocolo para Falhas de Equipamentos Críticos</h3>
-                      
-                      <div className="space-y-3">
-                        <div>
-                          <h4 className="font-medium mb-1">1. Detecção e Classificação</h4>
-                          <ul className="list-disc pl-5 text-sm space-y-1">
-                            <li>Identificar o equipamento afetado e verificar natureza da falha</li>
-                            <li>Classificar a criticidade conforme impacto operacional</li>
-                            <li>Verificar disponibilidade de sistemas redundantes/backup</li>
-                          </ul>
-                        </div>
-                        
-                        <div>
-                          <h4 className="font-medium mb-1">2. Resposta Imediata</h4>
-                          <ul className="list-disc pl-5 text-sm space-y-1">
-                            <li>Ativar sistemas redundantes se disponíveis</li>
-                            <li>Notificar operadores e equipes técnicas apropriadas</li>
-                            <li>Implementar limitações operacionais conforme necessário</li>
-                          </ul>
-                        </div>
-                        
-                        <div>
-                          <h4 className="font-medium mb-1">3. Reparo e Verificação</h4>
-                          <ul className="list-disc pl-5 text-sm space-y-1">
-                            <li>Despachar equipe técnica especializada</li>
-                            <li>Realizar diagnóstico e implementar reparo</li>
-                            <li>Realizar testes para verificar funcionalidade</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </TabsContent>
-                  
-                  <TabsContent value="evacuation">
-                    <div className="bg-neutral-50 dark:bg-darkbg-card p-4 rounded-lg">
-                      <h3 className="text-lg font-medium mb-3">Protocolo de Evacuação de Emergência</h3>
-                      
-                      <div className="space-y-3">
-                        <div>
-                          <h4 className="font-medium mb-1">1. Avaliação e Ativação</h4>
-                          <ul className="list-disc pl-5 text-sm space-y-1">
-                            <li>Identificar o tipo e extensão da emergência</li>
-                            <li>Determinar áreas afetadas e necessidade de evacuação</li>
-                            <li>Ativar alertas e sistemas de notificação</li>
-                          </ul>
-                        </div>
-                        
-                        <div>
-                          <h4 className="font-medium mb-1">2. Procedimentos de Evacuação</h4>
-                          <ul className="list-disc pl-5 text-sm space-y-1">
-                            <li>Comunicar instruções claras por sistemas de anúncio</li>
-                            <li>Orientar pessoas para rotas e pontos de encontro seguros</li>
-                            <li>Deslocar agentes para pontos críticos para assistência</li>
-                          </ul>
-                        </div>
-                        
-                        <div>
-                          <h4 className="font-medium mb-1">3. Contabilização e Verificação</h4>
-                          <ul className="list-disc pl-5 text-sm space-y-1">
-                            <li>Realizar contagem em pontos de encontro</li>
-                            <li>Verificar áreas evacuadas para confirmar ausência de pessoas</li>
-                            <li>Comunicar situação para equipes de resposta a emergências</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </TabsContent>
-                </Tabs>
-              </CardContent>
-            </Card>
           </TabsContent>
           
           <TabsContent value="analysis" className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <Card>
                 <CardHeader className="pb-2">
-                  <CardTitle className="text-lg">Análise de Tendências</CardTitle>
+                  <CardTitle className="text-lg">Incidents by Category</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="h-64">
+                  <div className="h-72">
                     <ResponsiveContainer width="100%" height="100%">
-                      <BarChart
-                        data={[
-                          { mes: "Jan", "2022": 35, "2023": 28 },
-                          { mes: "Fev", "2022": 42, "2023": 31 },
-                          { mes: "Mar", "2022": 28, "2023": 24 },
-                          { mes: "Abr", "2022": 37, "2023": 30 },
-                          { mes: "Mai", "2022": 40, "2023": 33 }
-                        ]}
-                        margin={{ top: 10, right: 10, left: 0, bottom: 10 }}
-                      >
-                        <CartesianGrid strokeDasharray="3 3" opacity={0.2} />
-                        <XAxis dataKey="mes" />
-                        <YAxis />
+                      <PieChart>
+                        <Pie
+                          data={analysisData.incidentsByCategory}
+                          cx="50%"
+                          cy="50%"
+                          labelLine={true}
+                          outerRadius={80}
+                          fill="#8884d8"
+                          dataKey="value"
+                          label={({ name, value, percent }) => `${name}: ${value} (${(percent * 100).toFixed(0)}%)`}
+                        >
+                          {analysisData.incidentsByCategory.map((entry, index) => (
+                            <Cell key={`cell-${index}`} fill={entry.color} />
+                          ))}
+                        </Pie>
                         <Tooltip />
-                        <Legend />
-                        <Bar dataKey="2022" fill="#1A73E8" name="2022" />
-                        <Bar dataKey="2023" fill="#34A853" name="2023" />
-                      </BarChart>
+                      </PieChart>
                     </ResponsiveContainer>
                   </div>
                   
-                  <div className="mt-4 p-3 bg-neutral-50 dark:bg-darkbg-card rounded-lg">
-                    <h3 className="font-medium mb-2">Comparativo Anual</h3>
-                    <div className="space-y-1 text-sm">
-                      <div className="flex justify-between">
-                        <span>Total 2022 (Jan-Mai):</span>
-                        <span>182 incidentes</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>Total 2023 (Jan-Mai):</span>
-                        <span>146 incidentes</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>Variação:</span>
-                        <span className="text-success flex items-center">
-                          <span className="material-icons text-sm mr-1">arrow_downward</span>
-                          -19.8%
-                        </span>
-                      </div>
+                  <div className="grid grid-cols-2 gap-2 mt-2">
+                    <div className="p-3 bg-neutral-50 dark:bg-darkbg-card rounded-lg">
+                      <div className="text-sm font-medium mb-1">Total incidents</div>
+                      <div className="text-2xl font-semibold">{analysisData.totalIncidents}</div>
+                    </div>
+                    <div className="p-3 bg-neutral-50 dark:bg-darkbg-card rounded-lg">
+                      <div className="text-sm font-medium mb-1">Avg. response time</div>
+                      <div className="text-2xl font-semibold">{analysisData.responseTimeStats.average} min</div>
                     </div>
                   </div>
                 </CardContent>
@@ -992,43 +586,41 @@ export default function Incidents() {
               
               <Card>
                 <CardHeader className="pb-2">
-                  <CardTitle className="text-lg">Tempo de Resposta por Categoria</CardTitle>
+                  <CardTitle className="text-lg">Response Time Analysis</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="h-64">
+                  <div className="h-72">
                     <ResponsiveContainer width="100%" height="100%">
                       <BarChart
                         data={analysisData.responseTime}
-                        margin={{ top: 10, right: 10, left: 0, bottom: 10 }}
+                        margin={{
+                          top: 5,
+                          right: 30,
+                          left: 20,
+                          bottom: 5,
+                        }}
                       >
-                        <CartesianGrid strokeDasharray="3 3" opacity={0.2} />
+                        <CartesianGrid strokeDasharray="3 3" />
                         <XAxis dataKey="name" />
-                        <YAxis domain={[0, 6]} />
-                        <Tooltip />
-                        <Bar dataKey="value" fill="#1A73E8" name="Minutos" />
+                        <YAxis />
+                        <Tooltip formatter={(value) => [`${value} min`, 'Response Time']} />
+                        <Bar dataKey="value" fill="#2E7D32" />
                       </BarChart>
                     </ResponsiveContainer>
                   </div>
                   
-                  <div className="mt-4 p-3 bg-neutral-50 dark:bg-darkbg-card rounded-lg">
-                    <h3 className="font-medium mb-2">Estatísticas de Resolução</h3>
-                    <div className="space-y-1 text-sm">
-                      <div className="flex justify-between">
-                        <span>Tempo médio de resposta:</span>
-                        <span>{analysisData.responseTimeStats.average} min</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>Meta de resposta:</span>
-                        <span>{analysisData.responseTimeStats.target} min</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>Melhor tempo:</span>
-                        <span>{analysisData.responseTimeStats.best} min</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>Performance vs meta:</span>
-                        <span className="text-success">86%</span>
-                      </div>
+                  <div className="grid grid-cols-3 gap-2 mt-2">
+                    <div className="p-2 bg-neutral-50 dark:bg-darkbg-card rounded-lg text-center">
+                      <div className="text-xs text-neutral-500 mb-1">Best time</div>
+                      <div className="font-medium text-success">{analysisData.responseTimeStats.best} min</div>
+                    </div>
+                    <div className="p-2 bg-neutral-50 dark:bg-darkbg-card rounded-lg text-center">
+                      <div className="text-xs text-neutral-500 mb-1">Average</div>
+                      <div className="font-medium">{analysisData.responseTimeStats.average} min</div>
+                    </div>
+                    <div className="p-2 bg-neutral-50 dark:bg-darkbg-card rounded-lg text-center">
+                      <div className="text-xs text-neutral-500 mb-1">Target</div>
+                      <div className="font-medium">{analysisData.responseTimeStats.target} min</div>
                     </div>
                   </div>
                 </CardContent>
@@ -1037,178 +629,156 @@ export default function Incidents() {
             
             <Card>
               <CardHeader className="pb-2">
-                <CardTitle className="text-lg">Matriz de Risco</CardTitle>
+                <CardTitle className="text-lg">Incident Trends</CardTitle>
+              </CardHeader>
+              <CardContent className="h-80">
+                <ResponsiveContainer width="100%" height="100%">
+                  <LineChart
+                    data={analysisData.incidentTrend}
+                    margin={{
+                      top: 5,
+                      right: 30,
+                      left: 20,
+                      bottom: 5,
+                    }}
+                  >
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="date" />
+                    <YAxis />
+                    <Tooltip />
+                    <Legend />
+                    <Line type="monotone" dataKey="critical" stroke="#D50000" name="Critical" />
+                    <Line type="monotone" dataKey="warning" stroke="#FF6D00" name="Warning" />
+                    <Line type="monotone" dataKey="info" stroke="#2979FF" name="Informational" />
+                  </LineChart>
+                </ResponsiveContainer>
+              </CardContent>
+            </Card>
+            
+            <Card>
+              <CardHeader className="pb-2">
+                <CardTitle className="text-lg">Predictive Maintenance</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <div className="md:col-span-1">
-                    <div className="bg-neutral-50 dark:bg-darkbg-card p-4 rounded-lg">
-                      <h3 className="font-medium mb-3">Classificação de Riscos</h3>
-                      <div className="space-y-2">
-                        <div className="p-2 bg-red-100 dark:bg-red-900 dark:bg-opacity-20 rounded">
-                          <div className="font-medium">Crítico</div>
-                          <div className="text-sm">Impacto alto, probabilidade alta</div>
-                        </div>
-                        <div className="p-2 bg-orange-100 dark:bg-orange-900 dark:bg-opacity-20 rounded">
-                          <div className="font-medium">Alto</div>
-                          <div className="text-sm">Impacto alto, probabilidade média</div>
-                        </div>
-                        <div className="p-2 bg-yellow-100 dark:bg-yellow-900 dark:bg-opacity-20 rounded">
-                          <div className="font-medium">Moderado</div>
-                          <div className="text-sm">Impacto médio, probabilidade média</div>
-                        </div>
-                        <div className="p-2 bg-blue-100 dark:bg-blue-900 dark:bg-opacity-20 rounded">
-                          <div className="font-medium">Baixo</div>
-                          <div className="text-sm">Impacto baixo ou probabilidade baixa</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="md:col-span-2">
-                    <div className="bg-neutral-50 dark:bg-darkbg-card p-4 rounded-lg">
-                      <h3 className="font-medium mb-3">Matriz de Risco - Principais Incidentes</h3>
-                      
-                      <div className="relative">
-                        {/* Matriz 3x3 */}
-                        <div className="grid grid-cols-3 gap-1">
-                          {/* Probabilidades: Alta, Média, Baixa */}
-                          {/* Impactos: Alto, Médio, Baixo */}
-                          
-                          {/* Alta probabilidade */}
-                          <div className="h-24 p-2 bg-red-500 bg-opacity-80 dark:bg-opacity-50 border border-neutral-200 dark:border-neutral-700 flex items-center justify-center text-white text-center text-xs">
-                            Alto Impacto<br/>Alta Probabilidade
-                          </div>
-                          <div className="h-24 p-2 bg-orange-500 bg-opacity-70 dark:bg-opacity-40 border border-neutral-200 dark:border-neutral-700 flex items-center justify-center text-center text-xs">
-                            Médio Impacto<br/>Alta Probabilidade
-                          </div>
-                          <div className="h-24 p-2 bg-yellow-500 bg-opacity-70 dark:bg-opacity-40 border border-neutral-200 dark:border-neutral-700 flex items-center justify-center text-center text-xs">
-                            Baixo Impacto<br/>Alta Probabilidade
-                          </div>
-                          
-                          {/* Média probabilidade */}
-                          <div className="h-24 p-2 bg-orange-500 bg-opacity-70 dark:bg-opacity-40 border border-neutral-200 dark:border-neutral-700 flex items-center justify-center text-center text-xs">
-                            Alto Impacto<br/>Média Probabilidade
-                          </div>
-                          <div className="h-24 p-2 bg-yellow-500 bg-opacity-70 dark:bg-opacity-40 border border-neutral-200 dark:border-neutral-700 flex items-center justify-center text-center text-xs">
-                            Médio Impacto<br/>Média Probabilidade
-                          </div>
-                          <div className="h-24 p-2 bg-blue-500 bg-opacity-50 dark:bg-opacity-30 border border-neutral-200 dark:border-neutral-700 flex items-center justify-center text-center text-xs">
-                            Baixo Impacto<br/>Média Probabilidade
-                          </div>
-                          
-                          {/* Baixa probabilidade */}
-                          <div className="h-24 p-2 bg-yellow-500 bg-opacity-70 dark:bg-opacity-40 border border-neutral-200 dark:border-neutral-700 flex items-center justify-center text-center text-xs">
-                            Alto Impacto<br/>Baixa Probabilidade
-                          </div>
-                          <div className="h-24 p-2 bg-blue-500 bg-opacity-50 dark:bg-opacity-30 border border-neutral-200 dark:border-neutral-700 flex items-center justify-center text-center text-xs">
-                            Médio Impacto<br/>Baixa Probabilidade
-                          </div>
-                          <div className="h-24 p-2 bg-blue-500 bg-opacity-50 dark:bg-opacity-30 border border-neutral-200 dark:border-neutral-700 flex items-center justify-center text-center text-xs">
-                            Baixo Impacto<br/>Baixa Probabilidade
-                          </div>
-                        </div>
-                        
-                        {/* Indicadores de incidentes */}
-                        <div className="absolute top-0 left-0 right-0 bottom-0 pointer-events-none">
-                          {/* FOD */}
-                          <div className="absolute top-[20%] left-[15%]">
-                            <div className="w-8 h-8 rounded-full bg-white dark:bg-darkbg-card shadow-md flex items-center justify-center font-medium text-xs">
-                              FOD
-                            </div>
-                          </div>
-                          
-                          {/* Raios */}
-                          <div className="absolute top-[15%] left-[50%]">
-                            <div className="w-8 h-8 rounded-full bg-white dark:bg-darkbg-card shadow-md flex items-center justify-center font-medium text-xs">
-                              Raios
-                            </div>
-                          </div>
-                          
-                          {/* Falha Equip. */}
-                          <div className="absolute top-[30%] left-[25%]">
-                            <div className="w-8 h-8 rounded-full bg-white dark:bg-darkbg-card shadow-md flex items-center justify-center font-medium text-xs">
-                              Equip.
-                            </div>
-                          </div>
-                          
-                          {/* Visibilidade */}
-                          <div className="absolute top-[40%] left-[60%]">
-                            <div className="w-8 h-8 rounded-full bg-white dark:bg-darkbg-card shadow-md flex items-center justify-center font-medium text-xs">
-                              Visib.
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <div className="mt-4 text-sm text-neutral-500">
-                        Nota: Esta matriz representa a classificação atual de riscos com base nos incidentes históricos e probabilidades estimadas.
-                      </div>
-                    </div>
-                  </div>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="border-b border-neutral-200 dark:border-neutral-700">
+                        <th className="text-left font-medium py-2 px-3">Equipment</th>
+                        <th className="text-left font-medium py-2 px-3">Risk Prediction</th>
+                        <th className="text-left font-medium py-2 px-3">Reason</th>
+                        <th className="text-left font-medium py-2 px-3">Status</th>
+                        <th className="text-right font-medium py-2 px-3">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {analysisData.maintenancePredictions.map((item, index) => (
+                        <tr 
+                          key={index} 
+                          className={cn(
+                            "border-b border-neutral-200 dark:border-neutral-700 last:border-0",
+                            index % 2 === 0 ? "bg-neutral-50 dark:bg-darkbg-card" : ""
+                          )}
+                        >
+                          <td className="py-3 px-3">{item.equipment}</td>
+                          <td className="py-3 px-3">{item.prediction}</td>
+                          <td className="py-3 px-3 max-w-[300px] truncate">{item.reason}</td>
+                          <td className="py-3 px-3">
+                            <Badge
+                              className={cn(
+                                item.status === "Scheduled" 
+                                  ? "bg-success" 
+                                  : item.status === "Pending" 
+                                    ? "bg-warning text-black" 
+                                    : "bg-neutral-500"
+                              )}
+                            >
+                              {item.status}
+                            </Badge>
+                          </td>
+                          <td className="py-3 px-3 text-right">
+                            <Button variant="outline" size="sm">View details</Button>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
                 </div>
               </CardContent>
             </Card>
           </TabsContent>
         </Tabs>
+        
+        <Dialog 
+          open={!!selectedIncidentData} 
+          onOpenChange={(open) => !open && setSelectedIncident(null)}
+        >
+          {selectedIncidentData && (
+            <DialogContent className="max-w-lg">
+              <DialogHeader>
+                <DialogTitle className="flex items-center gap-2">
+                  <Badge
+                    className={cn(
+                      selectedIncidentData.severity === "critical" 
+                        ? "bg-critical" 
+                        : selectedIncidentData.severity === "warning" 
+                          ? "bg-warning text-black" 
+                          : "bg-neutral-500"
+                    )}
+                  >
+                    {selectedIncidentData.severity === "critical" ? "Critical" : 
+                     selectedIncidentData.severity === "warning" ? "Warning" : "Informational"}
+                  </Badge>
+                  <span>Incident {selectedIncidentData.id}</span>
+                </DialogTitle>
+                <DialogDescription className="text-neutral-500">
+                  Reported: {selectedIncidentData.timestamp}
+                </DialogDescription>
+              </DialogHeader>
+              
+              <div className="space-y-4">
+                <div>
+                  <h3 className="font-medium text-lg mb-1">{selectedIncidentData.title}</h3>
+                  <p className="text-neutral-700 dark:text-neutral-300 text-sm">
+                    {selectedIncidentData.description}
+                  </p>
+                </div>
+                
+                {selectedIncidentData.actions && selectedIncidentData.actions.length > 0 && (
+                  <div>
+                    <h4 className="font-medium mb-2">Actions Taken</h4>
+                    <ul className="list-disc list-inside text-sm space-y-1">
+                      {selectedIncidentData.actions.map((action, i) => (
+                        <li key={i}>{action}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                
+                <div className="bg-neutral-50 dark:bg-darkbg-card p-3 rounded-md">
+                  <h4 className="font-medium mb-2">Status</h4>
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm">{selectedIncidentData.status || "Analyzing"}</span>
+                    <Badge variant="outline" className="ml-auto">Open</Badge>
+                  </div>
+                </div>
+                
+                <div className="flex items-center space-x-2 text-sm text-neutral-500">
+                  <span className="material-icons text-sm">access_time</span>
+                  <span>Last update: 10 minutes ago</span>
+                </div>
+              </div>
+              
+              <DialogFooter>
+                <Button variant="outline" onClick={() => setSelectedIncident(null)}>Close</Button>
+                <Button>Update Status</Button>
+              </DialogFooter>
+            </DialogContent>
+          )}
+        </Dialog>
       </main>
       
-      {selectedIncidentData && (
-        <Dialog open={!!selectedIncident} onOpenChange={(open) => !open && setSelectedIncident(null)}>
-          <DialogContent>
-            <DialogHeader>
-              <DialogTitle>Detalhes do Incidente</DialogTitle>
-              <DialogDescription>
-                ID: #{selectedIncidentData.id} | {selectedIncidentData.timestamp}
-              </DialogDescription>
-            </DialogHeader>
-            
-            <div className="space-y-4">
-              <div>
-                <h3 className="font-medium text-lg">{selectedIncidentData.title}</h3>
-                <p className="mt-2">{selectedIncidentData.description}</p>
-              </div>
-              
-              <div className="grid grid-cols-2 gap-2 text-sm">
-                <div className="bg-neutral-50 dark:bg-neutral-800 p-3 rounded-lg">
-                  <div className="text-neutral-500 mb-1">Severidade</div>
-                  <div className="font-medium">
-                    {selectedIncidentData.severity === "critical" ? "Crítico" : 
-                     selectedIncidentData.severity === "warning" ? "Atenção" : "Informativo"}
-                  </div>
-                </div>
-                <div className="bg-neutral-50 dark:bg-neutral-800 p-3 rounded-lg">
-                  <div className="text-neutral-500 mb-1">Status</div>
-                  <div className="font-medium">
-                    {selectedIncidentData.status || "Em análise"}
-                  </div>
-                </div>
-              </div>
-              
-              {selectedIncidentData.actions && (
-                <div>
-                  <h4 className="font-medium mb-2">Ações Tomadas</h4>
-                  <ul className="list-disc pl-5 space-y-1">
-                    {selectedIncidentData.actions.map((action, i) => (
-                      <li key={i}>{action}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </div>
-            
-            <DialogFooter>
-              <Button onClick={() => setSelectedIncident(null)}>Fechar</Button>
-              <Button variant="outline">Exportar Relatório</Button>
-            </DialogFooter>
-          </DialogContent>
-        </Dialog>
-      )}
-      
-      <Footer 
-        version="2.1.5" 
-        lastUpdate="18/05/2023" 
-      />
+      <Footer version="1.2.0" lastUpdate="05/12/2023" />
     </div>
-  );
+  )
 }
