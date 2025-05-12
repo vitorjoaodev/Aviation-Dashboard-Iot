@@ -19,9 +19,9 @@ export function RunwayMonitoring() {
     <Card className="lg:col-span-2 xl:col-span-2">
       <CardHeader className="pb-3">
         <div className="flex items-center justify-between">
-          <CardTitle className="text-xl">Monitoramento de Pistas</CardTitle>
+          <CardTitle className="text-xl">Runway Monitoring</CardTitle>
           <Button variant="link" className="text-primary text-sm">
-            Ver detalhes
+            View details
             <span className="material-icons text-sm ml-1">arrow_forward</span>
           </Button>
         </div>
@@ -31,7 +31,7 @@ export function RunwayMonitoring() {
         <div className="relative w-full h-64 rounded-lg overflow-hidden bg-neutral-100 dark:bg-darkbg-card">
           <img 
             src="https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600" 
-            alt="Vista aérea das pistas do aeroporto" 
+            alt="Aerial view of airport runways" 
             className="w-full h-full object-cover opacity-70 dark:opacity-50"
           />
           

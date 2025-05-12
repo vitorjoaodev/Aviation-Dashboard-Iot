@@ -109,8 +109,8 @@ export default function Runways() {
       <main className="flex-1 p-4 md:p-6 overflow-auto space-y-6">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
           <div>
-            <h1 className="text-2xl font-bold mb-1">Monitoramento de Pistas</h1>
-            <p className="text-neutral-500 dark:text-neutral-400">Monitoramento em tempo real das condições das pistas do aeroporto</p>
+            <h1 className="text-2xl font-bold mb-1">Runway Monitoring</h1>
+            <p className="text-neutral-500 dark:text-neutral-400">Real-time monitoring of airport runway conditions</p>
           </div>
           
           <div className="mt-4 md:mt-0 flex space-x-2">
@@ -119,37 +119,37 @@ export default function Runways() {
               onChange={(e) => setSelectedRunway(e.target.value)}
               className="bg-neutral-100 dark:bg-neutral-800 rounded-md border-none p-2 text-sm"
             >
-              <option value="all">Todas as pistas</option>
-              <option value="09R">Pista 09R/27L</option>
-              <option value="09L">Pista 09L/27R</option>
+              <option value="all">All runways</option>
+              <option value="09R">Runway 09R/27L</option>
+              <option value="09L">Runway 09L/27R</option>
             </select>
             
             <Button size="sm" variant="outline" className="bg-neutral-100 dark:bg-neutral-800">
               <span className="material-icons text-sm mr-1">print</span>
-              Relatório
+              Report
             </Button>
           </div>
         </div>
         
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">
           <TabsList className="bg-neutral-100 dark:bg-neutral-800">
-            <TabsTrigger value="overview">Visão Geral</TabsTrigger>
-            <TabsTrigger value="temperature">Temperatura</TabsTrigger>
-            <TabsTrigger value="friction">Coeficiente de Atrito</TabsTrigger>
-            <TabsTrigger value="foddetection">Detecção FOD</TabsTrigger>
+            <TabsTrigger value="overview">Overview</TabsTrigger>
+            <TabsTrigger value="temperature">Temperature</TabsTrigger>
+            <TabsTrigger value="friction">Friction Coefficient</TabsTrigger>
+            <TabsTrigger value="foddetection">FOD Detection</TabsTrigger>
           </TabsList>
           
           <TabsContent value="overview" className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <Card>
                 <CardHeader className="pb-2">
-                  <CardTitle className="text-lg">Vista Aérea das Pistas</CardTitle>
+                  <CardTitle className="text-lg">Aerial View of Runways</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="relative w-full h-96 rounded-lg overflow-hidden bg-neutral-100 dark:bg-darkbg-card">
                     <img 
                       src="https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600" 
-                      alt="Vista aérea das pistas do aeroporto" 
+                      alt="Aerial view of airport runways" 
                       className="w-full h-full object-cover opacity-70 dark:opacity-50"
                     />
                     
@@ -199,7 +199,7 @@ export default function Runways() {
               
               <Card>
                 <CardHeader className="pb-2">
-                  <CardTitle className="text-lg">Condições das Pistas</CardTitle>
+                  <CardTitle className="text-lg">Runway Conditions</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
@@ -216,11 +216,11 @@ export default function Runways() {
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
                           <div>
-                            <span className="text-neutral-500 dark:text-neutral-400">Última inspeção:</span>
+                            <span className="text-neutral-500 dark:text-neutral-400">Last inspection:</span>
                             <span className="ml-2">{runway.lastInspection}</span>
                           </div>
                           <div>
-                            <span className="text-neutral-500 dark:text-neutral-400">Próxima inspeção:</span>
+                            <span className="text-neutral-500 dark:text-neutral-400">Next inspection:</span>
                             <span className="ml-2">{runway.nextInspection}</span>
                           </div>
                         </div>

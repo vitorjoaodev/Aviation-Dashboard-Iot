@@ -1,0 +1,181 @@
+Monitoramento de Pistas
+Ver detalhes
+arrow_forward
+Vista aérea das pistas do aeroporto
+add
+
+remove
+
+layers
+Temperatura do Asfalto (°C)
+15:49
+17:49
+19:49
+0
+8
+16
+24
+32
+09R
+27.5°C
+27L
+28.2°C
+09L
+28.1°C
+Coeficiente de Atrito
+15:49
+17:49
+19:49
+0
+0.25
+0.5
+0.75
+1
+09R
+0.82
+27L
+0.79
+09L
+0.78
+Condições Meteorológicas
+Agora
+Previsão
+Temperatura
+25°C
+Sensação: 27°C
+Umidade
+72%
+Ponto orv.: 19°C
+Visibilidade
+5.2 km
+Normal
+QNH
+1013
+Estável
+Vento
+navigation
+270° / 12 kt
+Rajadas: 18 kt
+Alertas Meteorológicos
+flash_on
+Alerta de Tempestade
+Atividade elétrica detectada a 15km ao sul. Previsão de chegada em 25-30 min.
+water_drop
+Precipitação
+Chuva fraca prevista para as próximas 2 horas. Acumulado esperado: 2-5mm.
+Equipamentos Críticos
+
+refresh
+Lighting System
+Falha
+Taxiway C - Central Circuit
+Failure detected: 19:49 - Technical team notified
+Surface Radar
+Operacional
+Primary Radar - North Tower
+Last check: 19:49 - Normal operation
+PAPI System
+Operacional
+Runway 27L
+Intensity: 100% - Next calibration: 05/25
+Approach Lights
+Operacional
+ALS Runway 09R
+Normal operation - Intensity: 80%
+ATIS
+Operacional
+Automatic Transmission
+Info BRAVO active - Updated: 14:00Z
+Emergency Generator
+Atenção
+Generator #2 - Terminal 3
+Fuel level: 47% - Refueling scheduled
+Painel de Incidentes
+
+Todos
+
+filter_list
+12/05/2025, 19:41:39
+Detecção de FOD na pista 09R/27L
+Sistema de detecção automática identificou objeto metálico próximo à interseção com taxiway B. Dimensão estimada: 15cm.
+Crítico
+ID: #FOD-2775
+Ver detalhes
+12/05/2025, 19:41:39
+Alerta de tempestade aproximando-se
+Sistema de detecção de raios identificou atividade elétrica a 15km ao sul do aeroporto. Previsão de chuva e rajadas de vento nos próximos 30 minutos.
+Atenção
+ID: #WX-1125
+Ver detalhes
+12/05/2025, 19:41:39
+Falha no sistema de iluminação Taxiway C
+Falha detectada no circuito central de iluminação da Taxiway C. Aproximadamente 12 luzes afetadas. Equipe técnica notificada.
+Crítico
+ID: #EQP-3382
+Ver detalhes
+12/05/2025, 19:41:39
+Inspeção de rotina da pista 09L/27R concluída
+Inspeção visual e instrumental concluída sem identificação de problemas. Coeficiente de atrito medido: 0.78 (dentro dos parâmetros).
+Informativo
+ID: #OPS-5521
+Ver detalhes
+Carregar mais
+Análise de Dados
+Período:
+
+Últimas 24h
+
+date_range
+Incidentes por Categoria
+FOD: 14 (32%)
+Clima: 8 (18%)
+Equipamentos: 12 (27%)
+Outros: 10 (23%)
+Tempo de Resposta (min)
+FOD
+Clima
+Equip.
+Outros
+0
+2
+4
+6
+8
+
+Tempo médio de resposta:
+4.3 min
+Melhor tempo:
+1.2 min
+Meta atual:
+5 min
+Previsão de Manutenção
+Sistema PAPI - Pista 09R
+Manutenção preventiva necessária em 8 dias
+Intensidade reduzida detectada
+Sensor de Atrito - Equip. #3
+Calibração recomendada em 12 dias
+Desvio padrão aumentando
+Radar de Superfície - Torre Sul
+Verificação agendada em 30 dias
+Operando normalmente
+Ver todos os itens
+Tendência de Incidentes (Últimas 24h)
+06/05
+07/05
+08/05
+09/05
+10/05
+11/05
+12/05
+0
+2
+4
+6
+8
+CríticosAtençãoInformativos
+
+GRU IOT - Aviation Safety Monitoring System © 2025
+Support
+Documentation
+Privacy Policy
+Version 2.1.5 | Last update: 18/05/2023
